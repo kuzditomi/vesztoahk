@@ -1,17 +1,21 @@
-#Include ./src/screen.ahk
-#Include ./src/character.ahk
+#Include %A_ScriptDir%\src\commands.ahk
+#Include %A_ScriptDir%\src\screen.ahk
+#Include %A_ScriptDir%\src\character.ahk
 
-gameScreen := new Screen()
-chacter := new Character()
+global gameScreen := new Screen()
+global chacter := new Character()
 
 BlowUpMyself(){
     gameScreen.Play()
     chacter.RandomMove()
     chacter.ThrowGrenade()
     chacter.WalkIntoGrenade()
+    gameScreen.Result()
 }
 
-
-Ctrl & b::BlowUpMyself()
-
-
+Ctrl & b::
+Loop
+{
+    BlowUpMyself()
+    sleep 4000
+}

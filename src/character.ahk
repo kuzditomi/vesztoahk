@@ -17,13 +17,17 @@ Class Character {
     }
 
     ThrowGrenade() {
+        IfWinExist BlueStacks App Player
+            WinActivate
         click 1500, 547 ;gránát
     }
 
     WalkIntoGrenade() {
+        IfWinExist BlueStacks App Player
+            WinActivate
         MouseMove 154, 614
         MouseClickDrag, Left, 154, 614, 154, 404, 80
-        sleep 400
+        sleep 2000
     }
 
     Heal() {
