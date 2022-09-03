@@ -2,18 +2,18 @@
 
 #Include src\screens\gameScreen.ahk
 #Include src\screens\mainScreen.ahk
-#Include src\character.ahk
+#Include src\characters\firefly.ahk
 
 global mainScreen := new MainScreen()
 global gameScreen := new GameScreen()
-global chacter := new Character()
+global firefly := new FireFly()
 
 BlowUpMyself(){
     mainScreen.Play()
     gameScreen.WaitForGameStart()
-    chacter.RandomMove()
-    chacter.ThrowGrenade()
-    chacter.WalkIntoGrenade()
+    firefly.RandomMove()
+    firefly.ThrowGrenade()
+    firefly.WalkIntoGrenade()
     gameScreen.Result()
     mainScreen.ClosePopupsAfterMatch()
 }
