@@ -15,5 +15,15 @@ class FireFly extends CharacterBase {
         click 1670, 420 ;heal
         sleep 8200
     }
+
+    Introduction() {
+        introductionText := base.GetIntroductionText()
+        MsgBox,
+        (Ltrim
+            Ez a firefly onmegsemmisito script
+
+            %introductionText%
+        )
+    }
 }
 

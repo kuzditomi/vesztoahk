@@ -16,23 +16,22 @@ class CharacterBase {
         sleep 2500
     }
 
-    Introduction() {
-        MsgBox,
+    GetIntroductionText() {
+        generalIntroText = 
         (Ltrim
-            Ez a firefly onmegsemmisito script
-
             Mielott tovabbmesz, ellenorizd:
             - firefly van kivalasztva
             - king of the hill van kivalasztva
             - teljes kepernyon fut a bluestacks
 
-            Az uzenet bezarasakor indul a script!
-
-            Pause:      Ctrl + Z
-            Folytatas:  Ctrl + Y
-            Kilepes:    Ctrl + Q
+            Inditas:`t`tCtrl + B
+            Pause:`t`tCtrl + Z
+            Folytatas:`tCtrl + Y
+            Kilepes:`t`tCtrl + Q
 
             Hajra!
         )
+
+        return generalIntroText
     }
 }

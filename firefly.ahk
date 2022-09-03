@@ -18,8 +18,9 @@ BlowUpMyself(){
     mainScreen.ClosePopupsAfterMatch()
 }
 
-Ctrl & b::
 firefly.Introduction()
+
+Ctrl & b::
 Loop
 {
     BlowUpMyself()
