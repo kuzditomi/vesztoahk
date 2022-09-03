@@ -19,6 +19,7 @@ BlowUpMyself(){
 }
 
 Ctrl & b::
+firefly.Introduction()
 Loop
 {
     BlowUpMyself()
