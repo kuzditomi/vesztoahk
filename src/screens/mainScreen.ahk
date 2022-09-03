@@ -11,7 +11,7 @@ class MainScreen extends ScreenBase {
     }
 
     CheckOffer() {
-        If HasTextInRect("OFFER", [850, 125, 190, 50])
+        If base.HasTextInRect("OFFER", [850, 125, 190, 50])
             MsgBox, The string was found.
         Else
             MsgBox, The string was not found.
