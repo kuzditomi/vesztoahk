@@ -16,3 +16,11 @@ jobs:
         uses: kuzditomi/GitHub-Action-Ahk2Exe@main
         with:
           in: firefly.ahk
+          
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: firefly.exe
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
