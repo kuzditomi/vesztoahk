@@ -1,30 +1,39 @@
 #SingleInstance, Force
+#Warn All, StdOut
 
+#Include src\statistics.ahk
 #Include src\screens\gameScreen.ahk
 #Include src\screens\mainScreen.ahk
-#Include src\characters\firefly.ahk
+#Include src\characters\fireflyCharacter.ahk
 
-global mainScreen := new MainScreen()
-global gameScreen := new GameScreen()
-global firefly := new FireFly()
+global screens := {}
+
+screens.main := new MainScreen()
+screens.game := new GameScreen()
+
+global firefly := new FireflyCharacter()
 
 BlowUpMyself(){
-    mainScreen.Play()
-    gameScreen.WaitForGameStart()
+    screens.main.Play()
+    screens.game.WaitForGameStart()
+
     firefly.RandomMove()
     firefly.ThrowGrenade()
     firefly.WalkIntoGrenade()
-    gameScreen.Result()
-    mainScreen.ClosePopupsAfterMatch()
+    
+    screens.game.Result()
+    screens.main.ClosePopupsAfterMatch()
 }
 
 firefly.Introduction()
 
-Ctrl & b::
-Loop
-{
-    BlowUpMyself()
-    sleep 4000
-}
-
 #Include src\commands.ahk
+
+Ctrl & b:: 
+    Statistics.Start()
+    Loop {
+        BlowUpMyself()
+        Statistics.RecordRun()
+        sleep 2000
+    }
+

@@ -1,6 +1,6 @@
 #Include %A_LineFile%\..\characterBase.ahk
 
-class FireFly extends CharacterBase {
+class FireflyCharacter extends CharacterBase {
     ThrowGrenade() {
         click 1500, 547 ;gránát
     }
