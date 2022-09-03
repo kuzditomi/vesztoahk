@@ -10,10 +10,12 @@ global chacter := new Character()
 
 BlowUpMyself(){
     mainScreen.Play()
+    gameScreen.WaitForGameStart()
     chacter.RandomMove()
     chacter.ThrowGrenade()
     chacter.WalkIntoGrenade()
     gameScreen.Result()
+    mainScreen.ClosePopupsAfterMatch()
 }
 
 Ctrl & b::

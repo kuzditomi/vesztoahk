@@ -2,19 +2,24 @@
 
 class MainScreen extends ScreenBase {
     Play() {
-        IfWinExist BlueStacks App Player
-            WinActivate
-
+        base.ActivateBlueStack()
+        
         MouseGetPos, xpos, ypos
         click 1615, 940 ;play gomb
-        sleep 25000
     }
 
-    CheckOffer() {
+    CloseOffer() {
         If base.HasTextInRect("OFFER", [850, 125, 190, 50])
-            MsgBox, The string was found.
-        Else
-            MsgBox, The string was not found.
-        ExitApp
+            send {esc}
+    }
+
+    CloseFail() {
+        If base.HasTextInRect("FAILED", [680,250, 130,50])
+            send {esc}
+    }
+
+    ClosePopupsAfterMatch() {
+        this.CloseFail()
+        this.CloseOffer()
     }
 }

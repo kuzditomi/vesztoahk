@@ -1,9 +1,14 @@
 #Include %A_LineFile%\..\..\..\lib\PaddleOcr\PaddleOCR\PaddleOCR.ahk
 
 class ScreenBase {
-    HasTextInRect(textToFind, boundaries) {
-        IfWinExist BlueStacks App Player
+    ActivateBlueStack() {
+        IfWinExist BlueStacks
             WinActivate
+    }
+
+    HasTextInRect(textToFind, boundaries) {
+        this.ActivateBlueStack()
+
         title := PaddleOCR(boundaries)
         return InStr(title, textToFind)
     }
