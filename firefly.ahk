@@ -1,12 +1,15 @@
-#Include %A_ScriptDir%\src\commands.ahk
-#Include %A_ScriptDir%\src\screen.ahk
-#Include %A_ScriptDir%\src\character.ahk
+#SingleInstance, Force
 
-global gameScreen := new Screen()
+#Include src\screens\gameScreen.ahk
+#Include src\screens\mainScreen.ahk
+#Include src\character.ahk
+
+global mainScreen := new MainScreen()
+global gameScreen := new GameScreen()
 global chacter := new Character()
 
 BlowUpMyself(){
-    gameScreen.Play()
+    mainScreen.Play()
     chacter.RandomMove()
     chacter.ThrowGrenade()
     chacter.WalkIntoGrenade()
@@ -19,3 +22,5 @@ Loop
     BlowUpMyself()
     sleep 4000
 }
+
+#Include src\commands.ahk
