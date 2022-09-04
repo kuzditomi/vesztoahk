@@ -28,6 +28,12 @@ class MainScreen extends ScreenBase {
             send {esc}
     }
 
+    DeclineInvite() {
+        if base.HasTextInRect("INVITE", [888, 325, 150,60]) 
+
+        click 780, 695
+    }
+    
     ClosePopupsAfterMatch() {
         this.CloseFail()
         this.CloseOffer()
