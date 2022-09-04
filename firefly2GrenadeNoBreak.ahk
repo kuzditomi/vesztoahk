@@ -18,7 +18,7 @@ BlowUpMyself(){
     screens.main.Play()
     screens.game.WaitForGameStart()
 
-    firefly.RandomMove()
+    firefly.SingleRandomMove()
     firefly.ThrowGrenade()
     firefly.WalkIntoGrenade()
     firefly.Heal()
