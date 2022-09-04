@@ -6,6 +6,7 @@ class CharacterBase {
             MouseClickDrag, Left, 154, 614, 154, 590, 80
             sleep 2500
         }
+    }
     SingleRandomMove(){
             click 1500, 347
             MouseMove 154, 614
