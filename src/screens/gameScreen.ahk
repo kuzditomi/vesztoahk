@@ -9,11 +9,18 @@ class GameScreen extends ScreenBase {
     }
 
     WaitForGameStart() {
-        While !base.HasTextInRect("STARTS", [510, 970, 100, 45]) 
-        {
+     ;   While !base.HasTextInRect("STARTS", [510, 970, 100, 45]) 
+       loop 30 {
+        if !base.HasTextInRect("STARTS", [510, 970, 100, 45])
             sleep 2000
+        Else
+        break
         }
 
+        if base.HasTextInRect("STARTS", [510, 970, 100, 45])
         sleep 8000
+
     }
+
+
 }
