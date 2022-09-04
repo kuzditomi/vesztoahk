@@ -16,7 +16,7 @@ class CharacterBase {
                 - king of the hill van kivalasztva
                 - teljes kepernyon fut a bluestacks
 
-                Inditas:`t`tCtrl + B
+                Inditas:`t`tAlt + B
                 Pause:`t`tCtrl + Z
                 Folytatas:`tCtrl + Y
                 Kilepes:`t`tCtrl + Q
