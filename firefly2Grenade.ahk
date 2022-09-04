@@ -24,6 +24,7 @@ BlowUpMyself(){
     firefly.Heal()
      sleep 8200
     firefly.Heal()
+    sleep 600
     firefly.ThrowGrenade()
     firefly.WalkIntoGrenade()
     screens.game.Result()
