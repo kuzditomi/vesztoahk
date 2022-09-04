@@ -21,7 +21,11 @@ BlowUpMyself(){
     firefly.RandomMove()
     firefly.ThrowGrenade()
     firefly.WalkIntoGrenade()
-    
+    firefly.Heal()
+     sleep 8200
+    firefly.Heal()
+    firefly.ThrowGrenade()
+    firefly.WalkIntoGrenade()
     screens.game.Result()
     screens.main.ClosePopupsAfterMatch()
 }
