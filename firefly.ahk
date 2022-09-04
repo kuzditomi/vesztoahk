@@ -13,6 +13,7 @@ screens.game := new GameScreen()
 
 global firefly := new FireflyCharacter()
 
+
 BlowUpMyself(){
     screens.main.Play()
     screens.game.WaitForGameStart()
