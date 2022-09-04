@@ -3,6 +3,9 @@
 Ctrl & z::
     Statistics.Stop()
     Pause
+    
+    
+    
 
 Ctrl & y::
     Statistics.Start()
