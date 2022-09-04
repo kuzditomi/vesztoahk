@@ -33,11 +33,12 @@ class MainScreen extends ScreenBase {
 
         click 780, 695
     }
-    
+
     ClosePopupsAfterMatch() {
         this.CloseFail()
         this.CloseOffer()
         this.CloseContractProgress()
         this.CloseLeaguesAdvance()
+        this.DeclineInvite()
     }
 }
