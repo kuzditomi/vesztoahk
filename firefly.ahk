@@ -15,6 +15,7 @@ global firefly := new FireflyCharacter()
 
 
 BlowUpMyself(){
+    screens.main.ClosePopupsAfterMatch()
     screens.main.Play()
     screens.game.WaitForGameStart()
 

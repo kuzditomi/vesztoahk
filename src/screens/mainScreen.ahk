@@ -34,11 +34,17 @@ class MainScreen extends ScreenBase {
         click 780, 695
     }
 
+    CloseOffer2() {
+        If base.HasTextInRect("OFFER", [836, 131, 80,50])
+            click 1417, 225
+    }    
+
     ClosePopupsAfterMatch() {
         this.CloseFail()
         this.CloseOffer()
         this.CloseContractProgress()
         this.CloseLeaguesAdvance()
         this.DeclineInvite()
+        this.CloseOffer2()
     }
 }

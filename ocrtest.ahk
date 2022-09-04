@@ -4,7 +4,7 @@
 #Include src\screens\screenBase.ahk
 
 textToSearch := "Failed"
-rect := [680,250, 130,50]
+rect := [836, 131, 80,50]
 
 hastext := ScreenBase.HasTextInRect(textToSearch, rect)
 
