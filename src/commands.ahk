@@ -2,10 +2,7 @@
 
 Ctrl & z::
     Statistics.Stop()
-    Pause
-    
-    
-    
+    Pause    
 
 Ctrl & y::
     Statistics.Start()
