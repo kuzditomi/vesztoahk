@@ -13,8 +13,7 @@ class FireflyCharacter extends CharacterBase {
 
     Heal() {
         click 1670, 420 ;heal
-        sleep 8200
-    }
+        }
 
     Introduction() {
         introductionText := base.GetIntroductionText()
