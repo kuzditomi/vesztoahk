@@ -14,6 +14,9 @@ jobs:
 
       - name: Compile ahk to exe
         run: |
+          $cwd = (Get-Item .).FullName;
+          Write-Output ("$cwd\_autohotkey\;" + "$cwd\_autohotkey\Compiler") | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
           .\build.ps1
 
       - name: Release
