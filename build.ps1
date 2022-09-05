@@ -1,23 +1,22 @@
 $cwd = (Get-Item .).FullName;
-Write-Output ("$cwd\_autohotkey\;" + "$cwd\_autohotkey\Compiler") | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
 
 function downloadAhk {
     Invoke-WebRequest "https://www.autohotkey.com/download/ahk.zip" -OutFile "$cwd\autohotkey.zip";
     Expand-Archive -Path "$cwd\autohotkey.zip" -DestinationPath "$cwd\_autohotkey\" -Force;
+    
+    Copy-Item -Path "$cwd\_autohotkey\Compiler\Ahk2Exe.exen" -Destination "$cwd\ahk2exe.exe"
+    Copy-Item -Path "$cwd\_autohotkey\Compiler\Unicode 64-bit.bin" -Destination "$cwd\AutoHotkeySC.bin"
+
     Remove-Item -Path "$cwd\autohotkey.zip" -Force
-    Copy-Item -Path "$cwd\_autohotkey\Compiler\Unicode 64-bit.bin" -Destination "$cwd\_autohotkey\Compiler\AutoHotkeySC.bin"
+    Remove-Item -Path "$cwd\_autohotkey" -Force -Recurse
 }
 
 function buildScripts {
     Write-Output ("$cwd\_autohotkey\;" + "$cwd\_autohotkey\Compiler") | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
 
-    echo "gh path: $($env:GITHUB_PATH)"
-    echo "scriptek: $cwd\scripts\*.ahk"
-
     Get-ChildItem -Path "$cwd\scripts\*.ahk" | ForEach-Object `
     {
-        echo "sript path: $($_.fullname)"
-        $command = 'Ahk2Exe.exe /silent verbose '
+        $command = 'ahk2exe.exe /silent verbose '
         $command += '/in "' + $_.fullname + '"'
                 
         $command += " | Write-Output"
