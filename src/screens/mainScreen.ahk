@@ -20,7 +20,7 @@ class MainScreen extends ScreenBase {
 
     CloseContractProgress() {
         If base.HasTextInRect("CONTRACTS", [730, 60, 225, 60])
-            send {esc}
+            click 1755, 95
     }
 
     CloseLeaguesAdvance() {
