@@ -12,11 +12,10 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Ahk2Exe
-        uses: kuzditomi/GitHub-Action-Ahk2Exe@main
-        with:
-          in: scripts\*.ahk
-          
+      - name: Compile ahk to exe
+        run: |
+          .\build.ps1
+
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
