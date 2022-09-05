@@ -4,7 +4,7 @@
 #Include src\screens\screenBase.ahk
 
 textToSearch := "Failed"
-rect := [836, 131, 80,50]
+rect := [180, 50, 80,50]
 
 hastext := ScreenBase.HasTextInRect(textToSearch, rect)
 
@@ -12,4 +12,4 @@ If hastext
     MsgBox siker!
 Else
     ocr := PaddleOCR(rect)
-    MsgBox, Nem talalt! Ezt latom: %ocr%
+    MsgBox, Nem talaltam: %textToSearch%! Ezt latom: %ocr%
