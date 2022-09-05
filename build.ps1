@@ -11,10 +11,11 @@ function downloadAhk {
 function buildScripts {
     Get-ChildItem -Path "$cwd/scripts/*.ahk" | ForEach-Object `
     {
-        $command = 'ahk2exe.exe /silent verbose '
+        $command = 'Ahk2Exe.exe /silent verbose '
         $command += '/in "' + $_.fullname + '"'
                 
         $command += " | Write-Output"
+        echo $command
         Invoke-Expression $command
     }
 }
