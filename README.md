@@ -6,10 +6,13 @@
 
    https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuzditomi/PaddleOCR-AutoHotkey/tree/main/PaddleOCR/Dll
 
-2) Download and put the `.exe` file next to the `Dll folder` like that:
-    |Character| Latest version |
+2) Download and put the `.exe` file next to the `Dll folder`
+    |Script| Latest version |
     |-|-|
-    |Firefly| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/firefly.exe)|
+    |ALL| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/scripts.zip)|
+    |firefly| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/firefly.exe)|
+    |firefly2GrenadeBreakNeeded| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/scripts.zip)|
+    |firefly2GrenadeNoBreak| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/firefly2GrenadeNoBreak.exe)|
 
 It should look something like this:
 ```
@@ -39,7 +42,3 @@ AutoHotkey.exe firefly.ahk
 git tag -a v<<next> -m "Your message here"
 git push origin --tags
 ```
-
-
-
-

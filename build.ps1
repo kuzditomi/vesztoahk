@@ -20,7 +20,6 @@ function buildScripts {
         $command += '/in "' + $_.fullname + '"'
                 
         $command += " | Write-Output"
-        echo $command
         Invoke-Expression $command
     }
 }
