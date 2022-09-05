@@ -9,8 +9,12 @@ function downloadAhk {
 }
 
 function buildScripts {
-    Get-ChildItem -Path "$cwd/scripts/*.ahk" | ForEach-Object `
+    echo "gh path: $($env:GITHUB_PATH)"
+    echo "scriptek: $cwd\scripts\*.ahk"
+
+    Get-ChildItem -Path "$cwd\scripts\*.ahk" | ForEach-Object `
     {
+        echo "sript path: $($_.fullname)"
         $command = 'Ahk2Exe.exe /silent verbose '
         $command += '/in "' + $_.fullname + '"'
                 
