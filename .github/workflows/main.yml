@@ -15,7 +15,7 @@ jobs:
       - name: Ahk2Exe
         uses: kuzditomi/GitHub-Action-Ahk2Exe@main
         with:
-          in: scripts/*.ahk
+          in: scripts\*.ahk
           
       - name: Release
         uses: softprops/action-gh-release@v1
