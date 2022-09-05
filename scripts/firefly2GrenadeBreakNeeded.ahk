@@ -1,10 +1,10 @@
 #SingleInstance, Force
 #Warn All, StdOut
 
-#Include src\statistics.ahk
-#Include src\screens\gameScreen.ahk
-#Include src\screens\mainScreen.ahk
-#Include src\characters\fireflyCharacter.ahk
+#Include ..\src\statistics.ahk
+#Include ..\src\screens\gameScreen.ahk
+#Include ..\src\screens\mainScreen.ahk
+#Include ..\src\characters\fireflyCharacter.ahk
 
 global screens := {}
 
@@ -33,7 +33,7 @@ BlowUpMyself(){
 
 firefly.Introduction()
 
-#Include src\commands.ahk
+#Include ..\src\commands.ahk
 
 Alt & b:: 
     Statistics.Start()

@@ -1,2 +1,4 @@
 *.exe
 tmp
+scripts/Dll
+AutoHotkeySC.bin
