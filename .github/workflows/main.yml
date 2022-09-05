@@ -18,7 +18,7 @@ jobs:
 
       - name: create release zip
         if: startsWith(github.ref, 'refs/tags/v')
-        run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath scripts.zip
+        run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
 
       - name: Release
         uses: softprops/action-gh-release@v1

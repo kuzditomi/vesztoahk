@@ -9,9 +9,9 @@
 2) Download and put the `.exe` file next to the `Dll folder`
     |Script| Latest version |
     |-|-|
-    |ALL| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/scripts.zip)|
+    |ALL| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/all.zip)|
     |firefly| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/firefly.exe)|
-    |firefly2GrenadeBreakNeeded| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/scripts.zip)|
+    |firefly2GrenadeBreakNeeded| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/firefly2GrenadeBreakNeeded.exe)|
     |firefly2GrenadeNoBreak| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/firefly2GrenadeNoBreak.exe)|
 
 It should look something like this:
