@@ -30,6 +30,8 @@ class CharacterBase {
 
                 Hajra!
             )
+
+    }
     GetIntroMirageAFK() {
         generalIntroText = 
         (Ltrim
@@ -47,5 +49,5 @@ class CharacterBase {
             )
 
             return generalIntroText
-        }
     }
+ }
