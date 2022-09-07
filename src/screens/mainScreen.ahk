@@ -40,7 +40,7 @@ class MainScreen extends ScreenBase {
     }    
 
     DontSave() 
- {
+    {
         If base.HasTextInRect("DONTS", [614, 750, 165,60])
             click 614, 750
     }    

@@ -1,7 +1,7 @@
 #Include %A_LineFile%\..\characterBase.ahk
 
-class FireflyCharacter extends CharacterBase {
-    backJump() {
+class MirageCharacter extends CharacterBase {
+    BackJump() {
         click 1500, 547 ;gránát
     }
 
@@ -15,7 +15,7 @@ class FireflyCharacter extends CharacterBase {
 
     Heal() {
         click 1670, 420 ;heal
-        }
+    }
 
     Introduction() {
         introductionText := base.GetIntroMirageAFKt()
@@ -27,4 +27,3 @@ class FireflyCharacter extends CharacterBase {
         )
     }
 }
-

@@ -4,28 +4,43 @@
 #Include ..\src\statistics.ahk
 #Include ..\src\screens\gameScreen.ahk
 #Include ..\src\screens\mainScreen.ahk
-#Include ..\src\characters\MirageChar.ahk
+#Include ..\src\characters\mirageCharacter.ahk
 
 global screens := {}
+global mirage := new MirageCharacter()
 
 screens.main := new MainScreen()
 screens.game := new GameScreen()
-
-global mirage := new MirageChar()
 
 AFK(){
     screens.main.ClosePopupsAfterMatch()
     screens.main.Play()
     screens.game.WaitForGameStart()
-    
+
     mirage.WalkForward()
-;While !base.HasTextInRect("COLLECT", [867, 877, 300, 60]) or !base.HasTextInRect("DONTS", [614, 750, 165,60])
-loop 25
-{
-    mirage.backJump()
-    mirage.WalkForward()
-    sleep 7000
-}
+
+    loop
+    {
+        mirage.Heal()
+        sleep 200
+
+        mirage.BackJump()
+        mirage.WalkForward()
+
+        if base.HasTextInRect("COLLECT", [845, 865, 300, 60]) {
+            break
+        } else {
+            tooltip nem talaltam a collectet
+        }
+
+        if base.HasTextInRect("DONT", [614, 750, 165,60]) {
+            screens.main.DontSave()
+            break
+        }
+
+        sleep 7000
+    }
+
     screens.game.Result()
     screens.main.ClosePopupsAfterMatch()
 }
