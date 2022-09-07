@@ -11,6 +11,9 @@ class MainScreen extends ScreenBase {
     CloseOffer() {
         If base.HasTextInRect("OFFER", [850, 125, 190, 50])
             send {esc}
+        sleep 300
+         If base.HasTextInRect("YES", [718, 710, 190, 50])  
+         click 718, 710 
     }
 
     CloseFail() {

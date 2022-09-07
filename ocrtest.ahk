@@ -3,8 +3,8 @@
 #Include lib\PaddleOcr\PaddleOCR\PaddleOCR.ahk
 #Include src\screens\screenBase.ahk
 
-textToSearch := "COLLECT"
-rect := [845, 865, 300, 60]
+textToSearch := "offer"
+rect := [718, 710, 300, 60]
 
 hastext := ScreenBase.HasTextInRect(textToSearch, rect)
 
