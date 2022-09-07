@@ -19,7 +19,8 @@ AFK(){
     screens.game.WaitForGameStart()
     
     mirage.RandomMove()
-While !base.HasTextInRect("COLLECT", [867, 877, 300, 60]) or !base.HasTextInRect("DONTS", [614, 750, 165,60])
+;While !base.HasTextInRect("COLLECT", [867, 877, 300, 60]) or !base.HasTextInRect("DONTS", [614, 750, 165,60])
+loop 25
 {
     mirage.backJump()
     mirage.WalkForward()
