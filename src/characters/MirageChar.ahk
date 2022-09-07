@@ -1,11 +1,11 @@
 #Include %A_LineFile%\..\characterBase.ahk
 
 class FireflyCharacter extends CharacterBase {
-    ThrowGrenade() {
+    backJump() {
         click 1500, 547 ;gránát
     }
 
-    WalkIntoGrenade() {
+    WalkForward() {
         MouseMove 154, 614
         MouseClickDrag, Left, 154, 614, 154, 404, 80
         sleep 2000
