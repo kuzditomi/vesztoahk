@@ -30,6 +30,21 @@ class CharacterBase {
 
                 Hajra!
             )
+    GetIntroMirageAFK() {
+        generalIntroText = 
+        (Ltrim
+            Mielott tovabbmesz, ellenorizd:
+                - Mirage van kivalasztva
+                - Battle Royal van kivalasztva
+                - teljes kepernyon fut a bluestacks
+
+                Inditas:`t`tAlt + B
+                Pause:`t`tCtrl + Z
+                Folytatas:`tCtrl + Y
+                Kilepes:`t`tCtrl + Q
+
+                Hajra!
+            )
 
             return generalIntroText
         }
