@@ -39,6 +39,12 @@ class MainScreen extends ScreenBase {
             click 1417, 225
     }    
 
+    DontSave() 
+ {
+        If base.HasTextInRect("DONTS", [614, 750, 165,60])
+            click 614, 750
+    }    
+
     ClosePopupsAfterMatch() {
         this.CloseFail()
         this.CloseOffer()
