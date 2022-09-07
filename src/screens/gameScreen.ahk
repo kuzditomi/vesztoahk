@@ -13,17 +13,19 @@ class GameScreen extends ScreenBase {
        loop 30 {
         mousemove 510, 970
          tooltip Keresem a Start feliratot
-         sleep 1000
+         sleep 1900
          tooltip
         if !base.HasTextInRect("STARTS", [510, 970, 100, 45])
        
-            sleep 1000
+            sleep 100
         Else
         break
         }
 
         if base.HasTextInRect("STARTS", [510, 970, 100, 45])
+        tooltip Varom a jatek indulasat
         sleep 8000
+        tooltip
 
     }
 
