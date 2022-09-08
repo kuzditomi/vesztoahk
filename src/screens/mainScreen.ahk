@@ -49,7 +49,8 @@ class MainScreen extends ScreenBase {
     }    
     CloseRank() 
     {
-        If base.HasTextInRect("DONTS", [614, 750, 165,60])
+        If base.HasTextInRect("Leagues", [850, 327, 300, 60])
+        sleep 500
              click 1735,550 ;manage rank change
     }    
 
@@ -60,6 +61,6 @@ class MainScreen extends ScreenBase {
         this.CloseLeaguesAdvance()
         this.DeclineInvite()
         this.CloseOffer2()
-        
+        this.CloseRank()
     }
 }
