@@ -18,12 +18,12 @@ class MirageCharacter extends CharacterBase {
     }
 
     Introduction() {
-        introductionText := base.GetIntroMirageAFKt()
         MsgBox,
         (Ltrim
+        Ez a Mirage AFK script
             Mielott tovabbmesz, ellenorizd:
                 - Mirage van kivalasztva
-                - king of the hill van kivalasztva
+                - Battle Royal van kivalasztva
                 - teljes kepernyon fut a bluestacks
 
                 Inditas:`t`tAlt + B

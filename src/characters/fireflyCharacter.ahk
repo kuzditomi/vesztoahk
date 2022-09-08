@@ -16,13 +16,21 @@ class FireflyCharacter extends CharacterBase {
     }
 
     Introduction() {
-        introductionText := base.GetIntroductionText()
-        MsgBox,
+           MsgBox,
         (Ltrim
-            Ez a firefly onmegsemmisito script
+            Ez a Firefly onmegsemmisito script.
+            Mielott tovabbmesz, ellenorizd:
+                - firefly van kivalasztva
+                - king of the hill van kivalasztva
+                - teljes kepernyon fut a bluestacks
 
-            %introductionText%
-        )
+                Inditas:`t`tAlt + B
+                Pause:`t`tWin + Z
+                Folytatas:`tWin + Y
+                Kilepes:`t`tCtrl + Q
+
+                Hajra!
+            )
     }
 }
 
