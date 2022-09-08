@@ -24,8 +24,8 @@ class CharacterBase {
                 - teljes kepernyon fut a bluestacks
 
                 Inditas:`t`tAlt + B
-                Pause:`t`tCtrl + Z
-                Folytatas:`tCtrl + Y
+                Pause:`t`tWin + Z
+                Folytatas:`tWin + Y
                 Kilepes:`t`tCtrl + Q
 
                 Hajra!
@@ -41,8 +41,8 @@ class CharacterBase {
                 - teljes kepernyon fut a bluestacks
 
                 Inditas:`t`tAlt + B
-                Pause:`t`tCtrl + Z
-                Folytatas:`tCtrl + Y
+                Pause:`t`tWin + Z
+                Folytatas:`tWin + Y
                 Kilepes:`t`tCtrl + Q
 
                 Hajra!

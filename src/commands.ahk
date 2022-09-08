@@ -1,10 +1,10 @@
 #Include %A_LineFile%\..\statistics.ahk
 
-Ctrl & z::
+#z::
     Statistics.Stop()
     Pause    
 
-Ctrl & y::
+#y::
     Statistics.Start()
     Reload
 
