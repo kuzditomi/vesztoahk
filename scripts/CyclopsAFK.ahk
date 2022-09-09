@@ -19,14 +19,14 @@ AFK(){
 
     mirage.WalkForward()
 
-    loop 15
+    loop 9
     {
         
 
         mirage.BackJump() ; felderit
-        sleep 500
+        sleep 50
         mirage.Heal()
-        sleep 500
+        sleep 50
         base.SingleRandomMove()
 
         if base.HasTextInRect("COLLECT", [845, 865, 300, 60]) {
@@ -40,7 +40,7 @@ AFK(){
             break
         }
 
-        sleep 6200
+        sleep 12000
     }
 
     screens.game.Result()
