@@ -2,7 +2,7 @@
 
 class MirageCharacter extends CharacterBase {
     BackJump() {
-        click 1500, 547 ;gránát
+        click 1500, 547
     }
 
     WalkForward() {
@@ -14,7 +14,7 @@ class MirageCharacter extends CharacterBase {
     }
 
     Heal() {
-        click 1670, 420 ;heal
+        click 1670, 420
     }
 
     Introduction() {
@@ -28,7 +28,7 @@ class MirageCharacter extends CharacterBase {
 
                 Inditas:`t`tAlt + B
                 Pause:`t`tWin + Z
-                Folytatas:`tWin + Y
+                Reload:`t`Win + Y
                 Kilepes:`t`tCtrl + Q
 
                 Hajra!

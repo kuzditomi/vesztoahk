@@ -25,7 +25,7 @@ class CharacterBase {
 
                 Inditas:`t`tAlt + B
                 Pause:`t`tWin + Z
-                Folytatas:`tWin + Y
+                Reload:`t`Win + Y
                 Kilepes:`t`tCtrl + Q
 
                 Hajra!
@@ -42,7 +42,7 @@ class CharacterBase {
 
                 Inditas:`t`tAlt + B
                 Pause:`t`tWin + Z
-                Folytatas:`tWin + Y
+                Reload:`t`Win + Y
                 Kilepes:`t`tCtrl + Q
 
                 Hajra!
