@@ -8,6 +8,7 @@ class CharacterBase {
         }
     }
     SingleRandomMove(){
+        tooltip SingRandFwrd
             click 1500, 347
             MouseMove 154, 614
             MouseClickDrag, Left, 154, 614, 154, 590, 80

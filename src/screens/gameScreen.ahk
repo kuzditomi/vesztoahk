@@ -10,8 +10,8 @@ class GameScreen extends ScreenBase {
 
     WaitForGameStart() {
      ;   While !base.HasTextInRect("STARTS", [510, 970, 100, 45]) 
+          mousemove 510, 970     
        loop 30 {
-        mousemove 510, 970
          tooltip Keresem a Start feliratot
          sleep 1900
          tooltip

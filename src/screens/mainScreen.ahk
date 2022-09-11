@@ -68,7 +68,9 @@ class MainScreen extends ScreenBase {
         sleep 600
          If base.HasTextInRect("YES", [718, 710, 190, 50]) 
          click 718, 710 
-    }      
+    }    
+
+    
 
     ClosePopupsAfterMatch() {
         this.CloseFail()
@@ -81,4 +83,14 @@ class MainScreen extends ScreenBase {
         this.CloseOffer3()
         this.CloseOffer4()
     }
+
+    CollectWinChest() {
+        click 320, 996 ;battle chest
+        sleep 1800
+        loop 13
+        {
+            sleep 500
+            click 320, 996 ;battle chest
+        }
+    }     
 }

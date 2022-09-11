@@ -4,6 +4,9 @@
     Statistics.Stop()
     Pause    
 
+^!p::
+    Pause    
+
 #y::
     Statistics.Start()
     Reload
