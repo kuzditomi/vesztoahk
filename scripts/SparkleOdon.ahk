@@ -4,34 +4,34 @@
 #Include ..\src\statistics.ahk
 #Include ..\src\screens\gameScreen.ahk
 #Include ..\src\screens\mainScreen.ahk
-#Include ..\src\characters\fireflyCharacter.ahk
+#Include ..\src\characters\SparkleCharacter.ahk
 
 global screens := {}
 
 screens.main := new MainScreen()
 screens.game := new GameScreen()
 
-global firefly := new FireflyCharacter()
+global sparkle := new SparkleCharacter()
 
 
 BlowUpMyself(){
     screens.main.Play()
     screens.game.WaitForGameStart()
 
-    firefly.SingleRandomMove()
-    firefly.ThrowGrenade()
-    firefly.WalkIntoGrenade()
-    firefly.Heal()
+    sparkle.SingleRandomMove()
+    sparkle.ThrowGrenade()
+    sparkle.WalkIntoGrenade()
+    sparkle.Heal()
      sleep 6500
-    firefly.Heal()
+    sparkle.Heal()
     sleep 700
-    firefly.ThrowGrenade()
-    firefly.WalkIntoGrenade()
+    sparkle.ThrowGrenade()
+    sparkle.WalkIntoGrenade()
     screens.game.Result()
     screens.main.ClosePopupsAfterMatch()
 }
 
-firefly.Introduction()
+sparkle.Introduction()
 
 #Include ..\src\commands.ahk
 
