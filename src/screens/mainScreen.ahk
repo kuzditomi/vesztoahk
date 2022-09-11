@@ -9,12 +9,13 @@ class MainScreen extends ScreenBase {
     }
 
     CloseOffer() {
-        If base.HasTextInRect("OFFER", [850, 125, 190, 50])
-            send {esc}
-        sleep 300
+        If base.HasTextInRect("OFFER", [850, 125, 190, 50])  
+            click 1417, 225
+        sleep 600
          If base.HasTextInRect("YES", [718, 710, 190, 50])  
          click 718, 710 
     }
+
 
     CloseFail() {
         If base.HasTextInRect("FAILED", [680, 250, 130,50])
@@ -53,6 +54,21 @@ class MainScreen extends ScreenBase {
         sleep 500
              click 1735,550 ;manage rank change
     }    
+    CloseOffer3() {
+        If base.HasTextInRect("EPIC", [780, 185, 190, 100])
+            click 1417, 225
+        sleep 600
+         If base.HasTextInRect("YES", [718, 710, 190, 50])  
+         click 718, 710 
+    }      
+
+    CloseOffer4() {
+        If base.HasTextInRect("HUF", [989, 736, 190, 100]) 
+          click 1417, 225
+        sleep 600
+         If base.HasTextInRect("YES", [718, 710, 190, 50]) 
+         click 718, 710 
+    }      
 
     ClosePopupsAfterMatch() {
         this.CloseFail()
@@ -62,5 +78,7 @@ class MainScreen extends ScreenBase {
         this.DeclineInvite()
         this.CloseOffer2()
         this.CloseRank()
+        this.CloseOffer3()
+        this.CloseOffer4()
     }
 }
