@@ -4,10 +4,10 @@
 #Include ..\src\statistics.ahk
 #Include ..\src\screens\gameScreen.ahk
 #Include ..\src\screens\mainScreen.ahk
-#Include ..\src\characters\mirageCharacter.ahk
+#Include ..\src\characters\CyclopsCharacter.ahk
 
 global screens := {}
-global mirage := new MirageCharacter()
+global Cyclops := new CyclopsCharacter()
 
 screens.main := new MainScreen()
 screens.game := new GameScreen()
@@ -23,9 +23,9 @@ AFK(){
 
         loop 9
         {
-            mirage.BackJump() ; felderit
+            Cyclops.Felderit()
             sleep 50
-            mirage.Heal()
+            Cyclops.Heal()
             sleep 50
             base.SingleRandomMove()
 
@@ -48,7 +48,7 @@ AFK(){
     }
     screens.main.CollectWinChest()
 }
-mirage.Introduction()
+Cyclops.Introduction()
 
 #Include ..\src\commands.ahk
 
