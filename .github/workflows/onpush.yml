@@ -1,0 +1,8 @@
+name: On push
+
+on: push
+
+jobs:
+  build:
+    name: compile
+    uses: ./.github/workflows/build.yml
