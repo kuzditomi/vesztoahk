@@ -38,7 +38,9 @@ AutoHotkey.exe firefly.ahk
 ```
 
 ### Release new version
-```
-git tag -a v<<next> -m "Your message here"
-git push origin --tags
-```
+
+To create a new version and release, run the [Create release](https://github.com/kuzditomi/vesztoahk/actions/workflows/release.yml) action manually:
+- Go to [Actions / Create release](https://github.com/kuzditomi/vesztoahk/actions/workflows/release.yml) 
+- press `Run workflow`
+- write your release description
+- press green `Run workflow` button
