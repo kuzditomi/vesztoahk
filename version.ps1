@@ -7,4 +7,5 @@ $latestTag = @(git describe --tags $latestTagCommit)
 $latestVersion = [version]($latestTag.substring(1) )
 $newTag = "v$($latestVersion.Major).$($latestVersion.Minor+1)"
 
+echo "new tag: $newTag"
 echo "NEW_VERSION=$newTag" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf8 -Append

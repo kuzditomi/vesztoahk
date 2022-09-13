@@ -1,0 +1,17 @@
+name: On push
+
+on: push
+
+jobs:
+  onpush:
+    name: Version
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Create new 
+        run: |
+          .\version.ps1
