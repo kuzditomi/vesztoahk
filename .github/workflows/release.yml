@@ -1,14 +1,10 @@
 name: Create release
 
-on: 
+on:
   workflow_dispatch:
     inputs:
       description:
-        description: 'Release description'
-        required: true
-        type: string
-      tagname:
-        description: 'tag name'
+        description: "Release description"
         required: true
         type: string
 
@@ -25,15 +21,19 @@ jobs:
       - name: Compile ahk to exe
         run: |
           .\build.ps1
-          
+
       - name: Create release zip
         run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
+
+      - name: Create new version number
+        run: |
+          .\version.ps1
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          body: "${{ github.event.inputs.description }}"
-          tag_name:  "${{ github.event.inputs.tagname }}"
+          body: ${{ github.event.inputs.description }}
+          tag_name: ${{ env.NEW_VERSION }}
           files: |
             scripts\*.exe
             all.zip
