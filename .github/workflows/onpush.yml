@@ -1,0 +1,8 @@
+name: Build AHK
+
+on: push
+
+jobs:
+  build:
+    name: compile
+    uses: ./.github/actions/build
