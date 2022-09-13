@@ -1,3 +1,7 @@
+git --version
+git config user.name "GitHub Actions Bot"
+git config user.email "<>"
+
 $latestTagCommit = @(git rev-list --tags --max-count=1)
 $latestTag = @(git describe --tags $latestTagCommit)
 $latestVersion = [version]($latestTag.substring(1) )
