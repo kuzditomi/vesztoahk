@@ -15,17 +15,3 @@ jobs:
       - name: Compile ahk to exe
         run: |
           .\build.ps1
-
-      - name: create release zip
-        if: startsWith(github.ref, 'refs/tags/v')
-        run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
-
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/v')
-        with:
-          files: |
-            scripts\*.exe
-            all.zip
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
