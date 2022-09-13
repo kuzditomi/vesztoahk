@@ -22,9 +22,10 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Build
-        uses: ./.github/workflows/build.yml
-
+      - name: Compile ahk to exe
+        run: |
+          .\build.ps1
+          
       - name: Create release zip
         run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
 

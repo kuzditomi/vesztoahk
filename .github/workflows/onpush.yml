@@ -4,7 +4,7 @@ on: push
 
 jobs:
   onpush:
-    name: compile
+    name: On push
     runs-on: windows-latest
     steps:
       - name: Checkout
@@ -12,5 +12,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Build
-        uses: ./.github/workflows/build.yml
+      - name: Compile ahk to exe
+        run: |
+          .\build.ps1
