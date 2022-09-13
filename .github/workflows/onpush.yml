@@ -5,4 +5,4 @@ on: push
 jobs:
   build:
     name: compile
-    uses: ./.github/actions/build
+    uses: ./.github/workflows/build
