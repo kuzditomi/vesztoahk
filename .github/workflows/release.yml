@@ -14,18 +14,21 @@ on:
 
 jobs:
   release:
-    - uses: ./.github/workflows/build.yml
+    name: create release
+    steps:
+      - name: build
+        uses: ./.github/workflows/build.yml
 
-    - name: create release zip
-        run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
+      - name: create release zip
+          run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
 
-    - name: Release
-      uses: softprops/action-gh-release@v1
-      with:
-        body: "${{ github.event.inputs.description }}"
-        tag_name:  "${{ github.event.inputs.tagname }}"
-        files: |
-          scripts\*.exe
-          all.zip
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body: "${{ github.event.inputs.description }}"
+          tag_name:  "${{ github.event.inputs.tagname }}"
+          files: |
+            scripts\*.exe
+            all.zip
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
