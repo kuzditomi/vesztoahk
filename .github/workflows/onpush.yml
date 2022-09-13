@@ -3,11 +3,14 @@ name: On push
 on: push
 
 jobs:
-  build:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        submodules: recursive
+  onpush:
+    name: compile
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
-    - name: Build
-      uses: ./.github/workflows/build.yml
+      - name: Build
+        uses: ./.github/workflows/build.yml
