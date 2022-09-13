@@ -14,13 +14,18 @@ on:
 
 jobs:
   release:
-    name: create release
+    name: Create release
     runs-on: windows-latest
     steps:
-      - name: build
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Build
         uses: ./.github/workflows/build.yml
 
-      - name: create release zip
+      - name: Create release zip
         run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
 
       - name: Release

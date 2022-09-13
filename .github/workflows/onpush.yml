@@ -4,5 +4,10 @@ on: push
 
 jobs:
   build:
-    name: compile
-    uses: ./.github/workflows/build.yml
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+
+    - name: Build
+      uses: ./.github/workflows/build.yml

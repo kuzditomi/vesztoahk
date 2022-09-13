@@ -8,11 +8,6 @@ jobs:
     name: compile
     runs-on: windows-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: recursive
-
       - name: Compile ahk to exe
         run: |
           .\build.ps1
