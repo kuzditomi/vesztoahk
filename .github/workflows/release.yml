@@ -20,7 +20,7 @@ jobs:
         uses: ./.github/workflows/build.yml
 
       - name: create release zip
-          run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
+        run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
 
       - name: Release
         uses: softprops/action-gh-release@v1
