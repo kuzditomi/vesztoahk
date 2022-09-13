@@ -13,31 +13,19 @@ on:
         type: string
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
-
   release:
-    runs-on: windows-latest
-    needs: [compile]
-    steps:
-      - uses: actions/cache@v2
-        id: exe-files
-        with:
-          path: ./scripts/*.exe
-          key: ${{ github.sha }}
-      
-      - run: echo 'The triggering workflow passed'
+    - uses: ./.github/workflows/build.yml
 
-      - name: create release zip
+    - name: create release zip
         run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
 
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          body: "${{ github.event.inputs.description }}"
-          tag_name:  "${{ github.event.inputs.tagname }}"
-          files: |
-            scripts\*.exe
-            all.zip
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        body: "${{ github.event.inputs.description }}"
+        tag_name:  "${{ github.event.inputs.tagname }}"
+        files: |
+          scripts\*.exe
+          all.zip
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
