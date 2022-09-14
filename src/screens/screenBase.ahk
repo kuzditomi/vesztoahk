@@ -12,4 +12,9 @@ class ScreenBase {
         title := PaddleOCR(boundaries)
         return InStr(title, textToFind)
     }
+
+    IsPixelColor(x,y,color){
+        PixelGetColor, c, % x, % y
+        return c == color
+    }
 }
