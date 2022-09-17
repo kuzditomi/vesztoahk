@@ -1,5 +1,9 @@
 #Include %A_LineFile%\..\..\..\lib\PaddleOcr\PaddleOCR\PaddleOCR.ahk
 
+CoordMode, ToolTip, Screen
+CoordMode, Pixel, Screen
+CoordMode, Mouse, Screen
+
 class ScreenBase {
     ActivateBlueStack() {
         ; A bal oldali fekete savba lehet batran kattintgatni
@@ -19,7 +23,6 @@ class ScreenBase {
     }
 
     Esc() {
-        Tooltip Nyomom az escet
         this.ActivateBlueStack()
         Send, { esc }
     }
