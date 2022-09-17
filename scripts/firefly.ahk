@@ -12,15 +12,14 @@ screens.game := new GameScreen()
 
 global firefly := new FireflyCharacter()
 
-BlowUpMyself(){
-    screens.main.ClosePopupsAfterMatch()
+BlowUpMyself() {
     screens.main.Play()
     screens.game.WaitForGameStart()
 
     firefly.RandomMove()
     firefly.ThrowGrenade()
     firefly.WalkIntoGrenade()
-    
+
     screens.game.Result()
     screens.main.ClosePopupsAfterMatch()
 }

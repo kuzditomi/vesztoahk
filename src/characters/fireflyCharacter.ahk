@@ -2,7 +2,7 @@
 
 class FireflyCharacter extends CharacterBase {
     ThrowGrenade() {
-        click 1500, 547 ;gránát
+        click 1500, 547
     }
 
     WalkIntoGrenade() {
@@ -12,7 +12,7 @@ class FireflyCharacter extends CharacterBase {
     }
 
     Heal() {
-        click 1670, 420 ;heal
+        click 1670, 420
     }
 
     Introduction(scriptName, gameMode := "King of the hill") {

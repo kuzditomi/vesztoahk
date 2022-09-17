@@ -2,6 +2,7 @@
 #Warn, All
 
 #Include ..\src\screens\screenBase.ahk
+#Include ..\src\screens\gameScreen.ahk
 
 CoordMode, ToolTip, Screen
 CoordMode, Pixel, Screen
@@ -56,14 +57,13 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
 }
 
 ; Kép pixel szín keresés
-; TestImage("images\main.png", 490, 985, 0x3D0317)
+TestImage("images\winstreak.png", 880, 780, 0x1C43EA)
 
 ; Valódi játék képernyő pixel szín keresés
 ; TestGameScreen( 490, 985, 0x3D0317)
 
 ; Ellenőrzi hogy ugyanaz a játékképernyő és a képen lévő szín a pozíción
-TestMatchingColorPositionWithImageAndGameScreen("images\main.png", 490, 985, 0x3D0317)
+; TestMatchingColorPositionWithImageAndGameScreen("images\main.png", 490, 985, 0x3D0317)
 
-; MsgBox, Vegzett a teszt, ha nem volt uzenet utkozben, akkor minden fasza!
 
 ExitApp

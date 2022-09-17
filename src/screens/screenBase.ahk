@@ -2,8 +2,8 @@
 
 class ScreenBase {
     ActivateBlueStack() {
-        IfWinExist BlueStacks
-            WinActivate
+        ; A bal oldali fekete savba lehet batran kattintgatni
+        Click, 5, 45
     }
 
     HasTextInRect(textToFind, boundaries) {
@@ -13,8 +13,14 @@ class ScreenBase {
         return InStr(title, textToFind)
     }
 
-    IsPixelColor(x,y,color){
+    IsPixelColor(x,y,color) {
         PixelGetColor, c, % x, % y
         return c == color
+    }
+
+    Esc() {
+        Tooltip Nyomom az escet
+        this.ActivateBlueStack()
+        Send, { esc }
     }
 }
