@@ -4,7 +4,7 @@
 #Include ..\src\statistics.ahk
 #Include ..\src\screens\gameScreen.ahk
 #Include ..\src\screens\mainScreen.ahk
-#Include ..\src\characters\SparkleCharacter.ahk
+#Include ..\src\characters\sparkleCharacter.ahk
 
 global screens := {}
 screens.main := new MainScreen()
