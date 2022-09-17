@@ -4,10 +4,10 @@
 #Include ..\src\statistics.ahk
 #Include ..\src\screens\gameScreen.ahk
 #Include ..\src\screens\mainScreen.ahk
-#Include ..\src\characters\CyclopsCharacter.ahk
+#Include ..\src\characters\cyclopsCharacter.ahk
 
 global screens := {}
-global Cyclops := new CyclopsCharacter()
+global cyclops := new CyclopsCharacter()
 
 screens.main := new MainScreen()
 screens.game := new GameScreen()
@@ -23,9 +23,9 @@ AFK(){
 
         loop 9
         {
-            Cyclops.Felderit()
+            cyclops.Felderit()
             sleep 50
-            Cyclops.Heal()
+            cyclops.Heal()
             sleep 50
             base.SingleRandomMove()
 
@@ -48,7 +48,8 @@ AFK(){
     }
     screens.main.CollectWinChest()
 }
-Cyclops.Introduction()
+
+cyclops.Introduction("AFK")
 
 #Include ..\src\commands.ahk
 

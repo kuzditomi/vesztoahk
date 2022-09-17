@@ -1,5 +1,5 @@
 #Include %A_LineFile%\..\characterBase.ahk
-character:= Cyclops
+
 class CyclopsCharacter extends CharacterBase {
     Felderit() {
         click 1500, 547
@@ -17,21 +17,7 @@ class CyclopsCharacter extends CharacterBase {
         click 1670, 420
     }
 
-    Introduction() {
-        MsgBox,
-        (Ltrim
-        Ez a %character% AFK script
-            Mielott tovabbmesz, ellenorizd:
-                - %character% van kivalasztva
-                - Battle Royal van kivalasztva
-                - teljes kepernyon fut a bluestacks
-
-                Inditas:`t`tAlt + B
-                Pause:`t`tWin + Z
-                Reload:`t`Win + Y
-                Kilepes:`t`tCtrl + Q
-
-                Hajra!
-            )
+    Introduction(scriptName, gameMode := "Battle Royal") {
+        base.Introduction(scriptName, "Cyclops", gameMode)
     }
 }

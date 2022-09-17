@@ -7,10 +7,10 @@
 #Include ..\src\characters\mirageCharacter.ahk
 
 global screens := {}
-global mirage := new MirageCharacter()
-
 screens.main := new MainScreen()
 screens.game := new GameScreen()
+
+global mirage := new MirageCharacter()
 
 AFK(){
     screens.main.ClosePopupsAfterMatch()
@@ -46,7 +46,7 @@ AFK(){
     screens.main.ClosePopupsAfterMatch()
 }
 
-mirage.Introduction()
+mirage.Introduction("AFK")
 
 #Include ..\src\commands.ahk
 

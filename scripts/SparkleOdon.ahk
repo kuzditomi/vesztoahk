@@ -7,12 +7,10 @@
 #Include ..\src\characters\SparkleCharacter.ahk
 
 global screens := {}
-
 screens.main := new MainScreen()
 screens.game := new GameScreen()
 
 global sparkle := new SparkleCharacter()
-
 
 BlowUpMyself(){
     screens.main.Play()
@@ -22,7 +20,7 @@ BlowUpMyself(){
     sparkle.ThrowGrenade()
     sparkle.WalkIntoGrenade()
     sparkle.Heal()
-     sleep 6500
+    sleep 6500
     sparkle.Heal()
     sleep 700
     sparkle.ThrowGrenade()
@@ -31,7 +29,7 @@ BlowUpMyself(){
     screens.main.ClosePopupsAfterMatch()
 }
 
-sparkle.Introduction()
+sparkle.Introduction("Onmegsemmisito")
 
 #Include ..\src\commands.ahk
 

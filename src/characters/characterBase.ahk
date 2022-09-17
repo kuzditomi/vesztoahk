@@ -7,48 +7,32 @@ class CharacterBase {
             sleep 2500
         }
     }
+
     SingleRandomMove(){
         tooltip SingRandFwrd
-            click 1500, 347
-            MouseMove 154, 614
-            MouseClickDrag, Left, 154, 614, 154, 590, 80
-            sleep 250
-        
+        click 1500, 347
+        MouseMove 154, 614
+        MouseClickDrag, Left, 154, 614, 154, 590, 80
+        sleep 250
     }
 
-    GetIntroductionText() {
-        generalIntroText = 
+    Introduction(scriptName, characterName, gameMode)
+    {
+        MsgBox, 
         (Ltrim
+            Udv! Ez itt a %characterName% %scriptName% script.
+
             Mielott tovabbmesz, ellenorizd:
-                - firefly van kivalasztva
-                - king of the hill van kivalasztva
+                - %characterName% van kivalasztva
+                - %gameMode% van kivalasztva
                 - teljes kepernyon fut a bluestacks
 
                 Inditas:`t`tAlt + B
                 Pause:`t`tWin + Z
-                Reload:`t`Win + Y
+                Reload:`t`tWin + Y
                 Kilepes:`t`tCtrl + Q
 
                 Hajra!
-            )
-
+        )
     }
-    GetIntroMirageAFK() {
-        generalIntroText = 
-        (Ltrim
-            Mielott tovabbmesz, ellenorizd:
-                - Mirage van kivalasztva
-                - Battle Royal van kivalasztva
-                - teljes kepernyon fut a bluestacks
-
-                Inditas:`t`tAlt + B
-                Pause:`t`tWin + Z
-                Reload:`t`Win + Y
-                Kilepes:`t`tCtrl + Q
-
-                Hajra!
-            )
-
-            return generalIntroText
-    }
- }
+}

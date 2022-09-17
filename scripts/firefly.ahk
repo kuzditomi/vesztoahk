@@ -7,7 +7,6 @@
 #Include ..\src\characters\fireflyCharacter.ahk
 
 global screens := {}
-
 screens.main := new MainScreen()
 screens.game := new GameScreen()
 
@@ -26,7 +25,7 @@ BlowUpMyself(){
     screens.main.ClosePopupsAfterMatch()
 }
 
-firefly.Introduction()
+firefly.Introduction("Egy granatos onmegsemmito")
 
 #Include ..\src\commands.ahk
 

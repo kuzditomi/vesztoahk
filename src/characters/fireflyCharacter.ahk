@@ -15,22 +15,8 @@ class FireflyCharacter extends CharacterBase {
         click 1670, 420 ;heal
     }
 
-    Introduction() {
-           MsgBox,
-        (Ltrim
-            Ez a Firefly onmegsemmisito script.
-            Mielott tovabbmesz, ellenorizd:
-                - firefly van kivalasztva
-                - king of the hill van kivalasztva
-                - teljes kepernyon fut a bluestacks
-
-                Inditas:`t`tAlt + B
-                Pause:`t`tWin + Z
-                Reload:`t`Win + Y
-                Kilepes:`t`tCtrl + Q
-
-                Hajra!
-            )
+    Introduction(scriptName, gameMode := "King of the hill") {
+        base.Introduction(scriptName, "FireFly", gameMode)
     }
 }
 

@@ -17,21 +17,7 @@ class MirageCharacter extends CharacterBase {
         click 1670, 420
     }
 
-    Introduction() {
-        MsgBox,
-        (Ltrim
-        Ez a Mirage AFK script
-            Mielott tovabbmesz, ellenorizd:
-                - Mirage van kivalasztva
-                - Battle Royal van kivalasztva
-                - teljes kepernyon fut a bluestacks
-
-                Inditas:`t`tAlt + B
-                Pause:`t`tWin + Z
-                Reload:`t`Win + Y
-                Kilepes:`t`tCtrl + Q
-
-                Hajra!
-            )
+    Introduction(scriptName, gameMode := "Battle Royal") {
+        base.Introduction(scriptName, "Mirage", gameMode)
     }
 }
