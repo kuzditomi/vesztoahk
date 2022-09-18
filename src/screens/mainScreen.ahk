@@ -120,6 +120,7 @@ class MainScreen extends ScreenBase {
         this.CloseLeaguesAdvance()
         this.DeclineInvite()
         this.CloseOfferOutfit()
+        this.DontSave() 
     }
 
     CollectWinChest() {
