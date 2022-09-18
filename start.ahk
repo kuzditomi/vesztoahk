@@ -6,10 +6,10 @@
 #Include src\scripts\mirageAFK.ahk
 #Include src\scripts\sparkleOdon.ahk
 
+global currentScript := "he"
+
 starter := new StartGui()
 starter.Open("StartGame")
-
-global currentScript
 
 StartGame(scriptName) {
     Gui, Submit, NoHide
@@ -37,7 +37,8 @@ StartGame(scriptName) {
         }
     }
 
-    Gui, Destroy
+    introText := currentScript.GetIntroductionText()
+    return introText
 }
 
 #Include src\commands.ahk

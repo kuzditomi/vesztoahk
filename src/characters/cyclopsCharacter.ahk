@@ -17,7 +17,7 @@ class CyclopsCharacter extends CharacterBase {
         click 1670, 420
     }
 
-    Introduction(scriptName, gameMode := "Battle Royal") {
-        base.Introduction(scriptName, "Cyclops", gameMode)
+    GetIntroductionText(scriptName, gameMode := "Battle Royal") {
+        return base.GetIntroductionText(scriptName, "Cyclops", gameMode)
     }
 }

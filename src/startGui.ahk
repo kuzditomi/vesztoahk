@@ -1,13 +1,11 @@
-global ScriptNameSelector
+global startFn
+global introductionText
 
 class StartGui {
-    startFunctionName := ""
+    Open(startFunction) {
+        startFn := startFunction
 
-    Open(startFunctionName) {
-        this.startFunctionName := startFunctionName
-
-        Gui Add, Text, w60, Caption
-        ; Gui Add, DropDownList, vScriptNameSelector, Freddie buko||Cyclops|asd
+        Gui Add, Text, , hun venek ahk script gyujtemeny
 
         this.AddButton("Freddie buko", "firefly")
         this.AddButton("Freddie 2 granat buko", "firefly2Grenade")
@@ -15,12 +13,20 @@ class StartGui {
         this.AddButton("Mirage AFK", "mirageAFK")
         this.AddButton("Sparkle Odon", "sparkleOdon")
 
-        Gui Show, h600
+        Gui Add, Text, w400 h400 vintroductionText, 
+
+        Gui Show, h600 w500
     }
 
     AddButton(text, parameter) {
         GUI, Add, Button, HwndMyBtn, %text%
-        fn := Func(this.startFunctionName).Bind(parameter)
+        fn := StartGui.ScriptSelected.Bind(StartGui, parameter)
         GuiControl, +g, % MyBtn, % fn
+    }
+
+    ScriptSelected(scriptName) {
+        introText := startFn.(scriptName)
+
+        GuiControl,, introductionText, % introText
     }
 }

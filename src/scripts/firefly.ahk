@@ -1,20 +1,26 @@
 #Include %A_LineFile%\..\scriptBase.ahk
 #Include %A_LineFile%\..\..\characters\fireflyCharacter.ahk
 
-global firefly := new FireflyCharacter()
-
 class FireFlyScript extends ScriptBase {
+    __New(){
+        this.character := new FireflyCharacter()
+    }
+
+    GetIntroductionText() {
+        return this.character.GetIntroductionText("Egy granatos onmegsemmito") 
+    }
+
     Run() {
-        ; firefly.Introduction("Egy granatos onmegsemmito")
         this.screens.main.Play()
         this.screens.game.WaitForGameStart()
 
-        firefly.RandomMove()
-        firefly.ThrowGrenade()
-        firefly.WalkIntoGrenade()
+        this.character.RandomMove()
+        this.character.ThrowGrenade()
+        this.character.WalkIntoGrenade()
 
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()
     }
+
 }
 

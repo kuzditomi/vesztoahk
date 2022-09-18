@@ -15,7 +15,7 @@ class SparkleCharacter extends CharacterBase {
         click 1670, 420 ;heal
     }
 
-    Introduction(scriptName, gameMode := "King of the hill") {
-        base.Introduction(scriptName, "Sparkle", gameMode)
+    GetIntroductionText(scriptName, gameMode := "King of the hill") {
+        return base.GetIntroductionText(scriptName, "Sparkle", gameMode)
     }
 }

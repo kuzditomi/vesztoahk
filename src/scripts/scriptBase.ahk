@@ -10,6 +10,10 @@ class ScriptBase {
     }
 
     Run() {
+    }
 
+    GetIntroductionText(){
+        intrtext := this.character.GetIntroductionText() 
+        return intrtext
     }
 }

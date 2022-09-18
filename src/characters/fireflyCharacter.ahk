@@ -15,8 +15,8 @@ class FireflyCharacter extends CharacterBase {
         click 1670, 420
     }
 
-    Introduction(scriptName, gameMode := "King of the hill") {
-        base.Introduction(scriptName, "FireFly", gameMode)
+    GetIntroductionText(scriptName, gameMode := "King of the hill") {
+        return base.GetIntroductionText(scriptName, "FireFly", gameMode)
     }
 }
 

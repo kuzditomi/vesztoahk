@@ -16,9 +16,9 @@ class CharacterBase {
         sleep 250
     }
 
-    Introduction(scriptName, characterName, gameMode)
+    GetIntroductionText(scriptName, characterName, gameMode)
     {
-        MsgBox, 
+        introductionText =
         (Ltrim
             Udv! Ez itt a %characterName% %scriptName% script.
 
@@ -34,5 +34,7 @@ class CharacterBase {
 
                 Hajra!
         )
+
+        return introductionText
     }
 }

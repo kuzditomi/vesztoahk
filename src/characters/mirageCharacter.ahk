@@ -17,7 +17,7 @@ class MirageCharacter extends CharacterBase {
         click 1670, 420
     }
 
-    Introduction(scriptName, gameMode := "Battle Royal") {
-        base.Introduction(scriptName, "Mirage", gameMode)
+    GetIntroductionText(scriptName, gameMode := "Battle Royal") {
+        return base.GetIntroductionText(scriptName, "Mirage", gameMode)
     }
 }

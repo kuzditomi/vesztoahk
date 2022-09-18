@@ -1,24 +1,29 @@
 #Include %A_LineFile%\..\scriptBase.ahk
 #Include %A_LineFile%\..\..\characters\mirageCharacter.ahk
 
-global mirage := new MirageCharacter()
-
 class MirageAFKScript extends ScriptBase {
+    __New(){
+        this.character := new MirageCharacter()
+    }
+
+    GetIntroductionText() {
+        return this.character.GetIntroductionText("AFK") 
+    }
+
     Run() {
-        ; mirage.Introduction("AFK")
         this.screens.main.Play()
         this.screens.game.WaitForGameStart()
 
-        mirage.WalkForward()
+        this.character.WalkForward()
 
         loop 15
         {
-            mirage.Heal()
+            this.character.Heal()
             sleep 500
 
-            mirage.BackJump()
+            this.character.BackJump()
             sleep 200
-            mirage.WalkForward()
+            this.character.WalkForward()
 
             if base.HasTextInRect("COLLECT", [845, 865, 300, 60]) {
                 break

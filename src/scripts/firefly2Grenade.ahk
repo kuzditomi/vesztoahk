@@ -1,24 +1,28 @@
 #Include %A_LineFile%\..\scriptBase.ahk
 #Include %A_LineFile%\..\..\characters\fireflyCharacter.ahk
 
-global firefly := new FireflyCharacter()
-
 class FireFly2GrenadeScript extends ScriptBase {
-    Run() {
-        ; firefly.Introduction("Ket granatos onmegsemmito")
+    __New(){
+        this.character := new FireFlyCharacter()
+    }
 
+    GetIntroductionText() {
+        return this.character.GetIntroductionText("Ket granatos onmegsemmito") 
+    }
+    
+    Run() {
         this.screens.main.Play()
         this.screens.game.WaitForGameStart()
 
-        firefly.SingleRandomMove()
-        firefly.ThrowGrenade()
-        firefly.WalkIntoGrenade()
-        firefly.Heal()
+        this.character.SingleRandomMove()
+        this.character.ThrowGrenade()
+        this.character.WalkIntoGrenade()
+        this.character.Heal()
         sleep 8200
-        firefly.Heal()
+        this.character.Heal()
         sleep 600
-        firefly.ThrowGrenade()
-        firefly.WalkIntoGrenade()
+        this.character.ThrowGrenade()
+        this.character.WalkIntoGrenade()
 
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()

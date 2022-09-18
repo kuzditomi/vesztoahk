@@ -1,24 +1,28 @@
 #Include %A_LineFile%\..\scriptBase.ahk
 #Include %A_LineFile%\..\..\characters\cyclopsCharacter.ahk
 
-global cyclops := new CyclopsCharacter()
-
 class CyclopsAFKScript extends ScriptBase {
-    Run() {
-        ; cyclops.Introduction("AFK")
+    __New(){
+        this.character := new CyclopsCharacter()
+    }
 
+    GetIntroductionText() {
+        return this.character.GetIntroductionText("AFK") 
+    }
+
+    Run() {
         this.screens.main.Play()
         this.screens.game.WaitForGameStart()
 
-        cyclops.SingleRandomMove()
+        this.character.SingleRandomMove()
 
         loop 9
         {
-            cyclops.Felderit()
+            this.character.Felderit()
             sleep 50
-            cyclops.Heal()
+            this.character.Heal()
             sleep 50
-            cyclops.SingleRandomMove()
+            this.character.SingleRandomMove()
 
             if base.HasTextInRect("COLLECT", [845, 865, 300, 60]) 
                 break
@@ -26,15 +30,15 @@ class CyclopsAFKScript extends ScriptBase {
                 tooltip nem talaltam a collectet. Ezt talaltam: %ocr% 
 
             if base.HasTextInRect("DONT", [614, 750, 165,60]) {
-                screens.main.DontSave()
+                this.screens.main.DontSave()
                 break
             }
 
             sleep 12000 
         }
 
-        screens.game.Result()
-        screens.main.ClosePopupsAfterMatch()
-        screens.main.CollectWinChest()
+        this.screens.game.Result()
+        this.screens.main.ClosePopupsAfterMatch()
+        this.screens.main.CollectWinChest()
     }
 }
