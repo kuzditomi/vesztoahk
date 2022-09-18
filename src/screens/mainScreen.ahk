@@ -13,11 +13,12 @@ class MainScreen extends ScreenBase {
     }
 
     CloseOffer() {
-        If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
+        ;az X közepe sötétkék
+        if base.IsPixelColor(1364, 232, 0x944204) {
+       ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
             click 1417, 225
+            sleep 600
         }
-
-        sleep 600
 
         If base.HasTextInRect("YES", [718, 710, 190, 50]) {
             click 718, 710 
@@ -25,7 +26,9 @@ class MainScreen extends ScreenBase {
     }
 
     CloseFail() {
-        If base.HasTextInRect("FAILED", [680, 250, 130,50]) {
+        ;If base.HasTextInRect("FAILED", [680, 250, 130,50]) 
+        ;az X közepe sötétkék
+        if base.IsPixelColor(1240, 265, 0x944204){
             base.Esc()
         }
     }
@@ -43,7 +46,9 @@ class MainScreen extends ScreenBase {
     }
 
     DeclineInvite() {
-        if base.HasTextInRect("INVITE", [888, 325, 150,60]) {
+       ; if base.HasTextInRect("INVITE", [888, 325, 150,60]) 
+       ; Piros gomb és a serleg aranybarna
+        if (base.IsPixelColor(681, 655, 0x2247ED) && base.IsPixelColor(1270, 500, 0x076ee4)){
             click 780, 695
         }
     }
@@ -56,18 +61,11 @@ class MainScreen extends ScreenBase {
 
     DontSave() 
     {
-        If base.HasTextInRect("DONTS", [614, 750, 165,60]) {
+        ; If base.HasTextInRect("DONTS", [614, 750, 165,60]) {
+        ; Piros gomb és arany medál
+        if (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8)){
             click 614, 750
         }
-    } 
-
-    CloseRank() 
-    {
-        If base.HasTextInRect("Leagues", [850, 327, 300, 60]){
-            sleep 500
-        }
-
-        click 1735,550 ;manage rank change
     } 
 
     CloseOffer3() {
@@ -107,7 +105,6 @@ class MainScreen extends ScreenBase {
         this.CloseContractProgress()
         this.CloseLeaguesAdvance()
         this.DeclineInvite()
-        this.CloseRank()
     }
 
     CollectWinChest() {

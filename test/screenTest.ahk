@@ -57,7 +57,7 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
 }
 
 ; Kép pixel szín keresés
-; TestImage("images\offer.png", 889, 329, 0xFFFFFF)
+ TestImage("images\winstreak.png", 700, 450, 0x00b0f8)
 
 ; Valódi játék képernyő pixel szín keresés
 ; TestGameScreen( 490, 985, 0x3D0317)
