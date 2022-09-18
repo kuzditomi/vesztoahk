@@ -92,6 +92,20 @@ class MainScreen extends ScreenBase {
         }
     } 
 
+    CloseOfferOutfit() {
+        ;a gomb zöld
+        if base.IsPixelColor(1344, 805 , 0x09c462) {
+       ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
+            click 1420, 230
+            sleep 600
+        }
+
+        If base.HasTextInRect("YES", [718, 710, 190, 50]) {
+            click 718, 710 
+        }
+    }
+
+
     ClosePopupsAfterMatch() {
         if(this.CanPlay()) {
             return
@@ -105,6 +119,7 @@ class MainScreen extends ScreenBase {
         this.CloseContractProgress()
         this.CloseLeaguesAdvance()
         this.DeclineInvite()
+        this.CloseOfferOutfit()
     }
 
     CollectWinChest() {
