@@ -2,12 +2,7 @@
 #Include %A_LineFile%\..\..\screens\mainScreen.ahk
 
 class ScriptBase {
-    screens := {}
-
-    __New() {
-        this.screens.main := new MainScreen()
-        this.screens.game := new GameScreen()
-    }
+    screens := { main: new MainScreen(), game: new GameScreen() }
 
     Run() {
     }

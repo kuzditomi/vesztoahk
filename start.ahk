@@ -6,12 +6,18 @@
 #Include src\scripts\mirageAFK.ahk
 #Include src\scripts\sparkleOdon.ahk
 
-global currentScript := "he"
+global currentScript
+global scriptToRun
 
 starter := new StartGui()
-starter.Open("StartGame")
+starter.Open("SelectScript", "StartGame")
 
-StartGame(scriptName) {
+StartGame() {
+    scriptToRun := currentScript
+    Gui, Destroy
+}
+
+SelectScript(scriptName) {
     Gui, Submit, NoHide
 
     Switch scriptName
@@ -44,9 +50,14 @@ StartGame(scriptName) {
 #Include src\commands.ahk
 
 Alt & b:: 
+    if(!scriptToRun){
+        MsgBox, Kerlek valassz ki egy scriptet!
+        return
+    }
+
     Statistics.Start()
     Loop {
-        currentScript.Run()
+        scriptToRun.Run()
         Statistics.RecordRun()
         sleep 2000
     }

@@ -2,7 +2,7 @@
 #Include %A_LineFile%\..\..\characters\fireflyCharacter.ahk
 
 class FireFly2GrenadeScript extends ScriptBase {
-    __New(){
+    __New() {
         this.character := new FireFlyCharacter()
     }
 

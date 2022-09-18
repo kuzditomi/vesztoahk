@@ -2,7 +2,7 @@
 #Include %A_LineFile%\..\..\characters\fireflyCharacter.ahk
 
 class FireFlyScript extends ScriptBase {
-    __New(){
+    __New() {
         this.character := new FireflyCharacter()
     }
 
@@ -21,6 +21,4 @@ class FireFlyScript extends ScriptBase {
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()
     }
-
 }
-

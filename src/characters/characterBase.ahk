@@ -29,8 +29,8 @@ class CharacterBase {
 
                 Inditas:`t`tAlt + B
                 Pause:`t`tWin + Z
-                Reload:`t`tWin + Y
-                Kilepes:`t`tCtrl + Q
+                Reload:`tWin + Y
+                Kilepes:`tCtrl + Q
 
                 Hajra!
         )
