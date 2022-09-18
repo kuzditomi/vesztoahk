@@ -15,6 +15,7 @@ starter.Open("SelectScript", "StartGame")
 StartGame() {
     scriptToRun := currentScript
     Gui, Destroy
+    RunScript()
 }
 
 SelectScript(scriptName) {
@@ -49,7 +50,7 @@ SelectScript(scriptName) {
 
 #Include src\commands.ahk
 
-Alt & b:: 
+RunScript() {
     if(!scriptToRun){
         MsgBox, Kerlek valassz ki egy scriptet!
         return
@@ -61,3 +62,7 @@ Alt & b::
         Statistics.RecordRun()
         sleep 2000
     }
+}
+
+Alt & b:: 
+    RunScript()

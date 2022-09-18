@@ -27,12 +27,11 @@ class CharacterBase {
                 - %gameMode% van kivalasztva
                 - teljes kepernyon fut a bluestacks
 
-                Inditas:`t`tAlt + B
                 Pause:`t`tWin + Z
                 Reload:`tWin + Y
                 Kilepes:`tCtrl + Q
 
-                Hajra!
+                Ha minden kesz, mehet a START!
         )
 
         return introductionText
