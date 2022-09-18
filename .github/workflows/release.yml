@@ -23,9 +23,6 @@ jobs:
         run: |
           .\build.ps1
 
-      - name: Create release zip
-        run: Compress-Archive -Path scripts\*.exe -CompressionLevel Optimal -DestinationPath all.zip
-
       - name: Create new version number
         run: |
           .\version.ps1
@@ -36,7 +33,6 @@ jobs:
           body: ${{ github.event.inputs.description }}
           tag_name: ${{ env.NEW_VERSION }}
           files: |
-            scripts\*.exe
-            all.zip
+            start.exe
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

@@ -6,6 +6,9 @@ CoordMode, Mouse, Screen
 
 class ScreenBase {
     ActivateBlueStack() {
+        IfWinExist BlueStacks
+            WinActivate
+            
         ; A bal oldali fekete savba lehet batran kattintgatni
         Click, 5, 45
     }

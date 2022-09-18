@@ -14,14 +14,11 @@ function downloadAhk {
 function buildScripts {
     Write-Output ("$cwd\_autohotkey\;" + "$cwd\_autohotkey\Compiler") | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
 
-    Get-ChildItem -Path "$cwd\scripts\*.ahk" | ForEach-Object `
-    {
-        $command = './ahk2exe.exe /silent verbose '
-        $command += '/in "' + $_.fullname + '"'
+    $command = './ahk2exe.exe /silent verbose '
+    $command += '/in start.ahk'
                 
-        $command += " | Write-Output"
-        Invoke-Expression $command
-    }
+    $command += " | Write-Output"
+    Invoke-Expression $command
 }
 
 downloadAhk
