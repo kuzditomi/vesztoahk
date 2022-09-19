@@ -18,7 +18,16 @@ class FireFlyScript extends ScriptBase {
         this.character.ThrowGrenade()
         this.character.WalkIntoGrenade()
 
-        this.screens.game.Result()
+        if(this.screens.game.IsResultVisible()){
+            this.screens.game.Result()
+        } else {
+            ; nem sikerült belehalni az első bombába
+            this.character.TurnBack()
+            this.character.ThrowGrenade()
+            this.character.WalkIntoGrenade()
+            this.screens.game.Result()
+        }
+
         this.screens.main.ClosePopupsAfterMatch()
     }
 }

@@ -57,8 +57,9 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
     }
 }
 
-; Kép pixel szín keresés
-;  TestImage("images\battle_pals_decline.png", 865, 760 , 0x1C42EA)
+; ; Kép pixel szín keresés
+;  TestImage("images\results.png", 135, 950 , 0xEB950F)
+;  TestImage("images\results.png", 260, 955 , 0xFFFFFF)
 
 ; Valódi játék képernyő pixel szín keresés
 ; TestGameScreen( 490, 985, 0x3D0317)

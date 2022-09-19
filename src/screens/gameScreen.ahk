@@ -1,13 +1,15 @@
 #Include %A_LineFile%\..\screenBase.ahk
 
 class GameScreen extends ScreenBase {
-    Result() {
-        sleep 3000
-        
-        click 235, 956
+    IsResultVisible() {
+        ; Bal lent kék háttérű gomb és fehér szöveg benne
+        return (base.IsPixelColor(135, 950, 0xEB950F) && base.IsPixelColor(260, 955, 0xFFFFFF))
+    }
 
+    Result() { 
+        click 235, 956
         sleep 2500
-        
+
         ; Ez bezárja a winstreak ablakot is, nem kell DeclineWinstreak !!!
         this.Esc()
     }

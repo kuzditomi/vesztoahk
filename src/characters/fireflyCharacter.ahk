@@ -8,7 +8,7 @@ class FireflyCharacter extends CharacterBase {
     WalkIntoGrenade() {
         MouseMove 154, 614
         MouseClickDrag, Left, 154, 614, 154, 404, 80
-        sleep 2000
+        sleep 4000
     }
 
     Heal() {

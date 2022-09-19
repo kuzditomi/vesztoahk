@@ -16,6 +16,11 @@ class CharacterBase {
         sleep 250
     }
 
+    TurnBack() {
+        ; gyors de nem tul gyors
+        MouseClickDrag, Left, 1000, 600, 1675, 600, 3
+    }
+
     GetIntroductionText(scriptName, characterName, gameMode)
     {
         introductionText =
@@ -32,8 +37,9 @@ class CharacterBase {
                 Kilepes:`tCtrl + Q
 
                 Ha minden kesz, mehet a START!
-        )
+            )
 
-        return introductionText
+            return introductionText
+        }
     }
-}
+
