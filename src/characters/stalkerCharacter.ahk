@@ -1,11 +1,11 @@
 #Include %A_LineFile%\..\characterBase.ahk
 
-class CyclopsCharacter extends CharacterBase {
-    Scan() {
+class StalkerCharacter extends CharacterBase {
+    Invisibility() {
         base.MainAction()
     }
 
     GetIntroductionText(scriptName, gameMode := "Battle Royal") {
-        return base.GetIntroductionText(scriptName, "Cyclops", gameMode)
+        return base.GetIntroductionText(scriptName, "Stalker", gameMode)
     }
 }

@@ -18,7 +18,7 @@ class CyclopsAFKScript extends ScriptBase {
 
         loop 9
         {
-            this.character.Felderit()
+            this.character.Scan()
             sleep 50
             this.character.Heal()
             sleep 50

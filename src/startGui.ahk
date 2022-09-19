@@ -19,16 +19,19 @@ class StartGui {
 
         this.x += 120
         this.AddButton("Freddie 2 granat buko", "firefly2Grenade")
-        
+
         this.x += 120
         this.AddButton("Sparkle Odon", "sparkleOdon")
 
         this.x := 20
         this.y += 90
         this.AddButton("Cyclops AFK", "cyclopsAFK")
-        
+
         this.x += 120
         this.AddButton("Mirage AFK", "mirageAFK")
+
+        this.x += 120
+        this.AddButton("Stalker AFK", "stalkerAFK")
 
         Gui Add, Text, x50 w400 h250 vintroductionText
 

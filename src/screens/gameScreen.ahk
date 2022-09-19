@@ -14,6 +14,11 @@ class GameScreen extends ScreenBase {
         this.Esc()
     }
 
+    CanCollect() {
+        ; zöld collect gomb es feher felirat benne
+        return (base.IsPixelColor(800, 900, 0x13CA6C) && base.IsPixelColor(1019, 910 , 0xFFFFFF))
+    }
+
     WaitForGameStart() {
         While !base.IsPixelColor(661, 985, 0xC87700) {
             sleep 500

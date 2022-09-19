@@ -9,16 +9,27 @@ class CharacterBase {
     }
 
     SingleRandomMove(){
-        tooltip SingRandFwrd
         click 1500, 347
         MouseMove 154, 614
         MouseClickDrag, Left, 154, 614, 154, 590, 80
         sleep 250
     }
 
+    Heal() {
+        click 1670, 420
+    }
+
+    MainAction() {
+        click 1500, 547
+    }
+
     TurnBack() {
         ; gyors de nem tul gyors
         MouseClickDrag, Left, 1000, 600, 1675, 600, 3
+    }
+
+    WalkForward() {
+        MouseClickDrag, Left, 154, 614, 154, 404, 80
     }
 
     GetIntroductionText(scriptName, characterName, gameMode)
