@@ -3,6 +3,7 @@
 
 #Include ..\src\screens\screenBase.ahk
 #Include ..\src\screens\gameScreen.ahk
+#Include ..\src\screens\mainScreen.ahk
 
 CoordMode, ToolTip, Screen
 CoordMode, Pixel, Screen
@@ -57,7 +58,7 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
 }
 
 ; Kép pixel szín keresés
- TestImage("images\offer_outfit.png", 1420, 230 , 0x09c462)
+;  TestImage("images\battle_pals_decline.png", 865, 760 , 0x1C42EA)
 
 ; Valódi játék képernyő pixel szín keresés
 ; TestGameScreen( 490, 985, 0x3D0317)

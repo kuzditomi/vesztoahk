@@ -12,10 +12,24 @@ class MainScreen extends ScreenBase {
         return base.IsPixelColor(1750, 950, 0x09C563)
     }
 
+    CloseBattlePalsOffer() {
+        ; Sötétkék X körül és egy darab az egyik betűbúl fehér
+        if (base.IsPixelColor(1420, 260 , 0x7F2330) && base.IsPixelColor(1046, 236 , 0xFFEBF4)) {
+            base.Esc()
+
+            sleep 500
+
+            ; piros YES
+            if(base.IsPixelColor(865, 760 , 0x1C42EA)){
+                click 865, 760
+            }
+        }
+    }
+
     CloseOffer() {
         ;az X közepe sötétkék
         if base.IsPixelColor(1364, 232, 0x944204) {
-       ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
+            ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
             click 1417, 225
             sleep 600
         }
@@ -46,8 +60,8 @@ class MainScreen extends ScreenBase {
     }
 
     DeclineInvite() {
-       ; if base.HasTextInRect("INVITE", [888, 325, 150,60]) 
-       ; Piros gomb és a serleg aranybarna
+        ; if base.HasTextInRect("INVITE", [888, 325, 150,60]) 
+        ; Piros gomb és a serleg aranybarna
         if (base.IsPixelColor(681, 655, 0x2247ED) && base.IsPixelColor(1270, 500, 0x076ee4)){
             click 780, 695
         }
@@ -95,7 +109,7 @@ class MainScreen extends ScreenBase {
     CloseOfferOutfit() {
         ;a gomb zöld
         if base.IsPixelColor(1344, 805 , 0x09c462) {
-       ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
+            ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
             click 1420, 230
             sleep 600
         }
@@ -105,13 +119,21 @@ class MainScreen extends ScreenBase {
         }
     }
 
-
     ClosePopupsAfterMatch() {
         if(this.CanPlay()) {
             return
         }
 
         this.CloseFail()
+        if(this.CanPlay()) {
+            return
+        }
+
+        this.CloseBattlePalsOffer()
+        if(this.CanPlay()) {
+            return
+        }
+
         this.CloseOffer()
         this.CloseOffer2()
         this.CloseOffer3()
