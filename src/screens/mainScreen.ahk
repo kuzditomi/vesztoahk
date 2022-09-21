@@ -48,8 +48,11 @@ class MainScreen extends ScreenBase {
     }
 
     CloseContractProgress() {
-        If base.HasTextInRect("CONTRACTS", [730, 60, 225, 60])
+       ; If base.HasTextInRect("CONTRACTS", [730, 60, 225, 60])
+       ; Contract felirat szine turkiz es az x kozepe vilagoskek
+        if(base.IsPixelColor(1025, 90 , 0xFFe400) && base.IsPixelColor(1765, 90, 0xed8c0a)){
             click 1755, 95
+        }
     }
 
     CloseLeaguesAdvance() {
