@@ -124,34 +124,33 @@ class MainScreen extends ScreenBase {
 
     ClosePopupsAfterMatch() {
         sleep 1500
+        while(!this.CanPlay()){
+            this.CloseFail()
+            if(this.CanPlay()) {
+                return
+            }
 
-        if(this.CanPlay()) {
-            return
-        }
+            this.CloseBattlePalsOffer()
+            if(this.CanPlay()) {
+                return
+            }
 
-        this.CloseFail()
-        if(this.CanPlay()) {
-            return
-        }
+            this.CloseContractProgress()
+            if(this.CanPlay()) {
+                return
+            }
 
-        this.CloseBattlePalsOffer()
-        if(this.CanPlay()) {
-            return
-        }
+            this.CloseOffer()
+            this.CloseOffer2()
+            this.CloseOffer3()
+            this.CloseOffer4()
+            this.CloseLeaguesAdvance()
+            this.DeclineInvite()
+            this.CloseOfferOutfit()
+            this.DontSave() 
 
-        this.CloseContractProgress()
-        if(this.CanPlay()) {
-            return
-        }
-        
-        this.CloseOffer()
-        this.CloseOffer2()
-        this.CloseOffer3()
-        this.CloseOffer4()
-        this.CloseLeaguesAdvance()
-        this.DeclineInvite()
-        this.CloseOfferOutfit()
-        this.DontSave() 
+            sleep 1500
+        }        
     }
 
     CollectWinChest() {
