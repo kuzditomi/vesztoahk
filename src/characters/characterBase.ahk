@@ -3,8 +3,8 @@ class CharacterBase {
         Loop 2 {
             click 1500, 347
             MouseMove 154, 614
-            MouseClickDrag, Left, 154, 614, 165, 580, 80
-            sleep 2500
+            MouseClickDrag, Left, 154, 614, 185, 580, 80
+            sleep 1500
         }
     }
 
