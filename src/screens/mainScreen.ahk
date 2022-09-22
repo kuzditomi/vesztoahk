@@ -163,7 +163,7 @@ class MainScreen extends ScreenBase {
     ClosePopupsAfterMatch() {
         sleep 100
         while(!this.CanPlay()){
-            this.CloseByESC()
+           /* this.CloseByESC()
             if(this.CanPlay()) {
                 return
             }
@@ -172,7 +172,7 @@ class MainScreen extends ScreenBase {
             if(this.CanPlay()) {
                 return
             }   
-        /*
+         */
             this.CloseFail()
             if(this.CanPlay()) {
                 return
@@ -196,7 +196,7 @@ class MainScreen extends ScreenBase {
             this.DeclineInvite()
             this.CloseOfferOutfit()
             this.DontSave()
-         */
+        
 
             sleep 50
         }        
