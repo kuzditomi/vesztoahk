@@ -36,13 +36,17 @@ class MainScreen extends ScreenBase {
         ||
         ;Outfit offer - a gomb zöld
         base.IsPixelColor(1344, 805 , 0x09c462)
-        ||
-        ; offer után - piros YES
-        (base.IsPixelColor(865, 760 , 0x1C42EA))
         {
             base.Esc()
+        }
+       
+    }
 
-
+    ClickToClose(){
+     ; offer után - piros YES
+        if (base.IsPixelColor(865, 760 , 0x1C42EA))
+        {
+            click 718, 710 
         }
     }
 
@@ -163,6 +167,11 @@ class MainScreen extends ScreenBase {
             if(this.CanPlay()) {
                 return
             }
+ 
+            this.ClickToClose()
+            if(this.CanPlay()) {
+                return
+            }   
         /*
             this.CloseFail()
             if(this.CanPlay()) {
