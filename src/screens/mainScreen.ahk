@@ -161,7 +161,7 @@ class MainScreen extends ScreenBase {
     }
 
     ClosePopupsAfterMatch() {
-        sleep 100
+        sleep 1500
         while(!this.CanPlay()){
            /* this.CloseByESC()
             if(this.CanPlay()) {
