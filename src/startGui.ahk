@@ -33,6 +33,9 @@ class StartGui {
         this.x += 120
         this.AddButton("Stalker AFK", "stalkerAFK")
 
+        this.x += 120
+        this.AddButton("Sabotage AFK", "sabotageAFK")
+
         Gui Add, Text, x50 w400 h250 vintroductionText
 
         Gui Add, Button, x50 y530 w400 h50 g%startFunction%, Start

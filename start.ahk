@@ -6,6 +6,7 @@
 #Include src\scripts\mirageAFK.ahk
 #Include src\scripts\sparkleOdon.ahk
 #Include src\scripts\stalkerAFK.ahk
+#include src\scripts\sabotageAFK.ahk
 
 global currentScript
 global scriptToRun
@@ -41,6 +42,9 @@ SelectScript(scriptName) {
         }
         Case "stalkerAFK":{
             currentScript := new StalkerAFKScript()
+        }
+        Case "sabotageAFK":{
+            currentScript := new SabotageAFKScript()
         }
         Default: {
             MsgBox, "Valami hiba tortent :("
