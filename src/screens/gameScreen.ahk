@@ -17,6 +17,9 @@ class GameScreen extends ScreenBase {
     CanCollect() {
         ; zöld collect gomb es feher felirat benne
         return (base.IsPixelColor(800, 900, 0x13CA6C) && base.IsPixelColor(1019, 910 , 0xFFFFFF))
+    ||
+        ; Dont save - Piros gomb és arany medál
+        (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8))
     }
 
     WaitForGameStart() {

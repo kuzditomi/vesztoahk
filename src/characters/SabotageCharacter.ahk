@@ -5,6 +5,10 @@ class SabotageCharacter extends CharacterBase {
         base.MainAction()
     }
 
+    Heal() {
+        base.Heal()
+    }
+
     GetIntroductionText(scriptName, gameMode := "Sabotage") {
         return base.GetIntroductionText(scriptName, "Hero with TeamHeal", gameMode)
     }
