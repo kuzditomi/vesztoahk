@@ -20,7 +20,6 @@ class StalkerAFKScript extends ScriptBase {
                 sleep 1000
             } else {
                 this.character.SingleRandomMove()
-
                 this.character.Invisibility()
                 sleep 500
                 this.character.Heal()

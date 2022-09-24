@@ -24,21 +24,11 @@ class CyclopsAFKScript extends ScriptBase {
             sleep 50
             this.character.SingleRandomMove()
 
-            if base.HasTextInRect("COLLECT", [845, 865, 300, 60]) 
-                break
-            else 
-                tooltip nem talaltam a collectet. Ezt talaltam: %ocr% 
-
-            if base.HasTextInRect("DONT", [614, 750, 165,60]) {
-                this.screens.main.DontSave()
-                break
-            }
-
             sleep 12000 
         }
 
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()
-        this.screens.main.CollectWinChest()
+        this.screens.main.CollectChests()
     }
 }

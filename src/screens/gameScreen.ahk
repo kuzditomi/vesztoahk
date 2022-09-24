@@ -14,14 +14,19 @@ class GameScreen extends ScreenBase {
         this.Esc()
     }
 
+    IsMainActionActive() {
+        ; Villám a bomba/pajzs/bármi fölött
+        return base.IsPixelColor(1478, 470, 0xE4C99C)
+    }
+
+    IsDontSaveVisible() {
+        ; Dont save - Piros gomb és arany medál
+        return (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8))
+    }
+
     CanCollect() {
         ; zöld collect gomb es feher felirat benne
         return (base.IsPixelColor(800, 900, 0x13CA6C) && base.IsPixelColor(1019, 910 , 0xFFFFFF))
-/*
-  ||
-        ; Dont save - Piros gomb és arany medál
-        return (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8))
-*/
     }
 
     WaitForGameStart() {
@@ -33,12 +38,16 @@ class GameScreen extends ScreenBase {
         sleep 9000
     }
 
+    IsSabotageCharacterChoosing() {
+        return base.IsPixelColor(661, 985, 0xC87700)
+    }
+
     WaitForSabotageStart() {
-        While !base.IsPixelColor(661, 985, 0xC87700) {
+        While (!this.IsSabotageCharacterChoosing()) {
             sleep 500
         }
 
-        ; Visszaszámlálás 5től meg még 2-3mp töltés
+        ; Visszaszámlálás 11től meg még 2-3mp töltés
         sleep 14000
     }
 

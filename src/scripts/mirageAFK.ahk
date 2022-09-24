@@ -25,17 +25,6 @@ class MirageAFKScript extends ScriptBase {
             sleep 200
             this.character.WalkForward()
 
-            if base.HasTextInRect("COLLECT", [845, 865, 300, 60]) {
-                break
-            } else {
-                tooltip nem talaltam a collectet. Ezt talaltam: %ocr%
-            }
-
-            if base.HasTextInRect("DONT", [614, 750, 165,60]) {
-                this.screens.main.DontSave()
-                break
-            }
-
             sleep 6200
         }
 
