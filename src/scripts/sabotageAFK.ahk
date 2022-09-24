@@ -22,12 +22,13 @@ class SabotageAFKScript extends ScriptBase {
                 this.character.SingleRandomMove()
 
                 this.character.Heal()
-                sleep 5000
+                sleep 9000
             }
         }
 
         this.screens.game.Esc()
         this.screens.main.ClosePopupsAfterMatch()
         this.screens.main.CollectWinChest()
+        this.screens.main.CollectKillChest()
     }
 }

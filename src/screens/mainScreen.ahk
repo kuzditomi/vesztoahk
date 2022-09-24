@@ -196,6 +196,7 @@ class MainScreen extends ScreenBase {
             this.DeclineInvite()
             this.CloseOfferOutfit()
             this.DontSave()
+            this.ClickToClose()
         
 
             sleep 50
