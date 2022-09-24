@@ -11,7 +11,7 @@ class SabotageAFKScript extends ScriptBase {
     }
 
     Run() {
-        this.WriteDebug("Indito a jatekot a PLAY-el")
+        this.WriteDebug("Inditom a jatekot a PLAY-el")
 
         this.screens.main.Play()
         this.screens.game.WaitForSabotageStart()
@@ -28,6 +28,7 @@ class SabotageAFKScript extends ScriptBase {
         sleep 2000
         this.screens.game.Esc()
         
+        sleep 1000
         this.screens.main.ClosePopupsAfterMatch()
         this.screens.main.CollectChests()
 

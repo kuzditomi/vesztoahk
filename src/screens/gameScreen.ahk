@@ -42,14 +42,15 @@ class GameScreen extends ScreenBase {
     }
 
     WaitForSabotageStart() {
-        this.WriteDebug("Varom hogy kezdodjon a kovetkezo kor")
+        this.WriteDebug("Varom hogy kezdodjon a sabotage")
+        
         While (!this.IsSabotageCharacterChoosing()) {
             sleep 500
         }
 
         this.WriteDebug("Indul a visszaszamlalas...")
         ; Visszaszámlálás 11től meg még 2-3mp töltés
-        sleep 14000
+        sleep 15000
     }
 
     DeclineWinstreak() {

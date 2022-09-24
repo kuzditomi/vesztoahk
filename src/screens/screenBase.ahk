@@ -18,6 +18,7 @@ class ScreenBase {
     }
 
     IsPixelColor(x,y,color) {
+        this.ActivateBlueStack()
         PixelGetColor, c, % x, % y
         return c == color
     }
