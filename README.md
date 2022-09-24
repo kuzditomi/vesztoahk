@@ -2,36 +2,21 @@
 
 # Usage
 
-1) Download and extract the `Dll` folder:
+Download the latest `.exe` file: [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/start.exe)|
 
-   https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuzditomi/PaddleOCR-AutoHotkey/tree/main/PaddleOCR/Dll
 
-2) Download and put the `.exe` file next to the `Dll folder`
-    |Script| Latest version |
-    |-|-|
-    |starter| [DOWNLOAD](https://github.com/kuzditomi/vesztoahk/releases/latest/download/start.exe)|
-
-It should look something like this:
-```
-    scripts/
-    ├─ Dll/
-    │  ├─ PaddleOCR.dll
-    │  ├─ ...
-    ├─ firefly.exe
-```
 For all versions go to [releases](https://github.com/kuzditomi/vesztoahk/releases).
-
 
 # Develop
 
 ### Clone
 ```
-git clone --recurse-submodules git@github.com:kuzditomi/vesztoahk.git
+git clone git@github.com:kuzditomi/vesztoahk.git
 ```
 
 ### Run
 ```
-AutoHotkey.exe firefly.ahk
+AutoHotkey.exe start.ahk
 ```
 
 ### Release new version

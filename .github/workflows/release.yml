@@ -16,7 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          submodules: recursive
           fetch-depth: 0
 
       - name: Compile ahk to exe

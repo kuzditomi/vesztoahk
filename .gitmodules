@@ -1,3 +1,0 @@
-[submodule "lib/PaddleOcr"]
-	path = lib/PaddleOcr
-	url = https://github.com/kuzditomi/PaddleOCR-AutoHotkey.git
