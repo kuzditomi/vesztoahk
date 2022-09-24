@@ -1,5 +1,5 @@
 #Include %A_LineFile%\..\scriptBase.ahk
-#Include %A_LineFile%\..\..\characters\stalkerCharacter.ahk
+#Include %A_LineFile%\..\..\characters\SabotageCharacter.ahk
 
 class SabotageAFKScript extends ScriptBase {
     __New() {
@@ -12,7 +12,7 @@ class SabotageAFKScript extends ScriptBase {
 
     Run() {
         this.screens.main.Play()
-        this.screens.game.WaitForGameStart()
+        this.screens.game.WaitForSabotageStart()
 
         while(!this.screens.game.CanCollect()) {
             ; Ha mar meghaltunk, nem kell csinalni semmit, csak varni

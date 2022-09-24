@@ -9,7 +9,7 @@ class SabotageCharacter extends CharacterBase {
         base.Heal()
     }
 
-    GetIntroductionText(scriptName, gameMode := "Sabotage") {
-        return base.GetIntroductionText(scriptName, "Hero with TeamHeal", gameMode)
+    GetIntroductionText(scriptName, gameMode := "Team heales karakter") {
+        return base.GetIntroductionText(scriptName, "Sabotage", gameMode)
     }
 }

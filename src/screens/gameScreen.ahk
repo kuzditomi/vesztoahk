@@ -33,6 +33,15 @@ class GameScreen extends ScreenBase {
         sleep 9000
     }
 
+    WaitForSabotageStart() {
+        While !base.IsPixelColor(661, 985, 0xC87700) {
+            sleep 500
+        }
+
+        ; Visszaszámlálás 5től meg még 2-3mp töltés
+        sleep 14000
+    }
+
     DeclineWinstreak() {
         sleep 3000
         if (base.IsPixelColor(880, 780, 0x1C43EA)) {
