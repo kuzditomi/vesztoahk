@@ -30,5 +30,8 @@ class SabotageAFKScript extends ScriptBase {
         
         this.screens.main.ClosePopupsAfterMatch()
         this.screens.main.CollectChests()
+
+        ; Ládanyitós contract pl
+        this.screens.main.ClosePopupsAfterMatch()
     }
 }

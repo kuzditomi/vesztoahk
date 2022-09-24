@@ -1,4 +1,5 @@
 #Include %A_LineFile%\..\screenBase.ahk
+#Include %A_LineFile%\..\..\statistics.ahk
 
 class MainScreen extends ScreenBase {
     Play() {
@@ -75,7 +76,7 @@ class MainScreen extends ScreenBase {
         if (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8)){
             click 614, 750
         }
-    }  
+    } 
 
     CloseOfferOutfit() {
         ;a gomb zöld
@@ -122,6 +123,7 @@ class MainScreen extends ScreenBase {
     CollectWinChest() {
         ; Sárga a ládától jobbra
         if (base.IsPixelColor(485, 920, 0x27ABFE)){
+            Statistics.CollectedWinChest()
             click 320, 920 ;battle chest bal lent
             sleep 1800
             this.Esc()
@@ -135,6 +137,8 @@ class MainScreen extends ScreenBase {
     CollectKillChest() {
         ; Sárga a ládától jobbra
         if (base.IsPixelColor(700, 925 , 0x27ABFE)){
+            Statistics.CollectedKillChest()
+
             click 320, 920 ;battle chest bal lent
             sleep 1800
             this.Esc()
