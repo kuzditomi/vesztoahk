@@ -208,18 +208,20 @@ class MainScreen extends ScreenBase {
             click 320, 920 ;battle chest bal lent
             sleep 1800
             this.Esc()
-            sleep 1800
+            sleep 1300
+            ; ClosContract progress - Contract felirat szine turkiz es az x kozepe vilagoskek
             if (base.IsPixelColor(1025, 90 , 0xFFe400) && base.IsPixelColor(1765, 90, 0xed8c0a))
             this.Esc()
         }
     } 
     CollectKillChest() {
         ; Sárga a ládától jobbra
-        if (base.IsPixelColor(485, 920, 0x27ABFE)){
+        if (base.IsPixelColor(700, 925 , 0x27ABFE)){
             click 320, 920 ;battle chest bal lent
             sleep 1800
             this.Esc()
-            sleep 1800
+            sleep 1300
+            ; ClosContract progress - Contract felirat szine turkiz es az x kozepe vilagoskek
             if (base.IsPixelColor(1025, 90 , 0xFFe400) && base.IsPixelColor(1765, 90, 0xed8c0a))
             this.Esc()
         }
