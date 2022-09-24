@@ -213,4 +213,15 @@ class MainScreen extends ScreenBase {
             this.Esc()
         }
     } 
+    CollectKillChest() {
+        ; Sárga a ládától jobbra
+        if (base.IsPixelColor(485, 920, 0x27ABFE)){
+            click 320, 920 ;battle chest bal lent
+            sleep 1800
+            this.Esc()
+            sleep 1800
+            if (base.IsPixelColor(1025, 90 , 0xFFe400) && base.IsPixelColor(1765, 90, 0xed8c0a))
+            this.Esc()
+        }
+    } 
 }
