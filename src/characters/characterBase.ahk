@@ -1,4 +1,10 @@
+#Include %A_LineFile%\..\..\debugGui.ahk
+
 class CharacterBase {
+    WriteDebug(message) {
+        DebugGui.Write(message)
+    }
+
     RandomMove(){
         Loop 2 {
             click 1500, 347

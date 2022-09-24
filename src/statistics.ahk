@@ -1,3 +1,5 @@
+#Include %A_LineFile%\..\debugGui.ahk
+
 class Statistics {
     static totalRunCount := 0
     static totalRuntime := 0
@@ -18,10 +20,14 @@ class Statistics {
         averageRuntime := Round(Statistics.totalRuntime / Statistics.totalRunCount / 1000)
         totalRunCount := Statistics.totalRunCount
 
-        MsgBox, 
+        debugMessage = 
         (Ltrim
             %totalRunCount% kor teljesitve.
             Az atlagos kor %averageRuntime% masodpercig tartott.
         )
+
+        DebugGui.Write(debugMessage)
+
+        MsgBox, 4096, Alert, Ennyi!
     }
 }

@@ -7,6 +7,7 @@
 #Include src\scripts\sparkleOdon.ahk
 #Include src\scripts\stalkerAFK.ahk
 #include src\scripts\sabotageAFK.ahk
+#include src\debugGui.ahk
 
 global currentScript
 global scriptToRun
@@ -65,6 +66,9 @@ RunScript() {
     }
 
     Statistics.Start()
+    DebugGui.Init()
+    DebugGui.Show()
+
     Loop {
         scriptToRun.Run()
         Statistics.RecordRun()

@@ -5,12 +5,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "PowerShell",
+      "type": "ahk",
+      "name": "start script",
       "request": "launch",
-      "name": "run AHK file",
-      "script": "AutoHotkey.exe ${file}",
-      "args": [],
-      "cwd": "${file}"
+      "program": "${workspaceFolder}/start.ahk",
     }
   ]
 }
