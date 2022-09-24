@@ -6,6 +6,8 @@ class SabotageCharacter extends CharacterBase {
     }
 
     Heal() {
+        this.WriteDebug("Nyomom a healt")
+
         base.Heal()
     }
 

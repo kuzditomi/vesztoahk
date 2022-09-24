@@ -11,16 +11,22 @@ class SabotageAFKScript extends ScriptBase {
     }
 
     Run() {
+        this.WriteDebug("Indito a jatekot a PLAY-el")
+
         this.screens.main.Play()
         this.screens.game.WaitForSabotageStart()
 
         this.character.Heal()
 
         while(!this.screens.game.IsDontSaveVisible() && !this.screens.game.CanCollect()) {
+            this.WriteDebug("Varok hogy lassam a sabotage jatek veget")
+
             sleep 1000
         }
 
-        this.sceens.game.Esc()
+        this.WriteDebug("Vege a jateknak, kilepek")
+        sleep 2000
+        this.screens.game.Esc()
         
         this.screens.main.ClosePopupsAfterMatch()
         this.screens.main.CollectChests()

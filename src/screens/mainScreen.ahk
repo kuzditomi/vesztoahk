@@ -96,6 +96,8 @@ class MainScreen extends ScreenBase {
 
     ClosePopupsAfterMatch() {
         sleep 1500
+        this.WriteDebug("Elkezdek minden szart bezarni")
+
         while(!this.CanPlay()){
             this.CloseFail()
             this.CloseBattlePalsOffer()
@@ -111,6 +113,8 @@ class MainScreen extends ScreenBase {
     }
 
     CollectChests() {
+        this.WriteDebug("Osszeszedem a ladakat")
+
         this.CollectWinChest()
         this.CollectKillChest()
     }
