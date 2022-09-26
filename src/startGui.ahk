@@ -15,9 +15,10 @@ class StartGui {
         Gui, Add, Text,, HunVenek script gyujtemeny
         Gui, Font, s7
 
-        this.AddButton("Freddie buko", "firefly")
+        this.AddButton("Freddie buko", "freddieBuko")
 
-        this.x += 120
+        this.y += 90
+        this.x := 20
         this.AddButton("Firefly 2 granat buko", "firefly2Grenade")
 
         this.x += 120
@@ -25,6 +26,9 @@ class StartGui {
 
         this.x += 120
         this.AddButton("Sparkle Max", "Sparkle2Grenade")
+        
+        this.x += 120
+        this.AddButton("Sparkle Tomi", "sparkleTomi")
 
         this.x := 20
         this.y += 90
@@ -40,11 +44,11 @@ class StartGui {
         this.y += 90
         this.AddButton("Sabotage AFK", "sabotageAFK")
 
-        Gui Add, Text, x420 y100 w350 h250 vintroductionText
+        Gui Add, Text, x620 y100 w350 h250 vintroductionText
 
         Gui Add, Button, x50 y530 w400 h50 g%startFunction%, Start
 
-        Gui Show, h600 w800
+        Gui Show, h600 w1000
     }
 
     AddButton(text, parameter) {
