@@ -38,10 +38,14 @@ class MainScreen extends ScreenBase {
         this.CloseDeclineOffer()
     }
 
+    IsFailVisible() {
+        return base.IsPixelColor(1240, 265, 0x944204)
+    }
+
     CloseFail() {
         ;If base.HasTextInRect("FAILED", [680, 250, 130,50]) 
         ;az X közepe sötétkék
-        if base.IsPixelColor(1240, 265, 0x944204){
+        if (this.IsFailVisible()){
             base.Esc()
         }
     }
