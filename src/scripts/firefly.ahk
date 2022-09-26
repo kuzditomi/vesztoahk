@@ -19,7 +19,7 @@ class FireFlyScript extends ScriptBase {
         this.character.WalkIntoGrenade()
 
         ; nem sikerült belehalni az első bombába
-        while(!this.screens.game.IsResultVisible()){
+        while(!this.screens.game.IsResultVisible() && this.screens.MainScreen.CloseFail()){
             this.character.TurnBack()
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
