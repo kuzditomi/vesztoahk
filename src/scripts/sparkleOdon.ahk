@@ -18,9 +18,9 @@ class SparkleOdonScript extends ScriptBase {
         this.character.ThrowGrenade()
         this.character.WalkIntoGrenade()
         this.character.Heal()
-        sleep 6500
+        sleep 5500
         this.character.Heal()
-        sleep 700
+        sleep 1700
         this.character.ThrowGrenade()
         this.character.WalkIntoGrenade()
 
