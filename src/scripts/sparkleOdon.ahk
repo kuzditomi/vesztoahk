@@ -25,6 +25,13 @@ class SparkleOdonScript extends ScriptBase {
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
         
+                ; nem sikerült belehalni az első bombába
+        while(!this.screens.game.IsResultVisible() && this.screens.MainScreen.CloseFail()){
+            this.character.TurnBack()
+            this.character.ThrowGrenade()
+            this.character.WalkIntoGrenade()
+        }
+        
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()
         this.screens.main.CollectChests()

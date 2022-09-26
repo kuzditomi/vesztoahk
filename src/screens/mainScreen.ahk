@@ -95,6 +95,16 @@ class MainScreen extends ScreenBase {
         }
     }
 
+    CloseCollect(){
+        if base.IsPixelColor(800, 900, 0x13CA6C) {
+            click 800, 900 
+        }
+    }
+    CloseResult(){
+        if (base.IsPixelColor(135, 950, 0xEB950F) && base.IsPixelColor(260, 955, 0xFFFFFF)) {
+            click 235, 956 
+        }
+    }
     ClosePopupsAfterMatch() {
         sleep 1500
         this.WriteDebug("Elkezdek minden szart bezarni")
@@ -108,6 +118,8 @@ class MainScreen extends ScreenBase {
             this.CloseLeaguesAdvance()
             this.DeclineInvite()
             this.DontSave()
+            this.CloseResult()
+            this.CloseCollect()
 
             sleep 200
         } 
