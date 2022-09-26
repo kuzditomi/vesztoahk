@@ -1,0 +1,24 @@
+{
+  "content": null,
+  "embeds": [
+    {
+      "title": "Új verzió elérhető!",
+      "description": "{{description}}",
+      "url": "https://github.com/kuzditomi/vesztoahk/releases/tag/{{tag}}",
+      "color": 1638147,
+      "fields": [
+        {
+          "name": "Verzió",
+          "value": "{{tag}}",
+          "inline": true
+        },
+        {
+          "name": "Letöltés",
+          "value": "[EXE](https://github.com/kuzditomi/vesztoahk/releases/download/{{tag}}/start.exe)",
+          "inline": true
+        }
+      ]
+    }
+  ],
+  "attachments": []
+}

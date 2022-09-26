@@ -24,7 +24,7 @@ jobs:
 
       - name: Create new version number
         run: |
-          .\version.ps1
+          .\version.ps1 "${{ github.event.inputs.description }}"
 
       - name: Release
         uses: softprops/action-gh-release@v1
@@ -35,3 +35,9 @@ jobs:
             start.exe
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Send Discord notification
+        uses: tsickert/discord-webhook@v5.2.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+          raw-data: .github/workflows/template.json
