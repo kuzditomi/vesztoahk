@@ -27,7 +27,6 @@ class FireFlyScript extends ScriptBase {
 
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()
-        this.screens.main.CollectWinChest()
-        this.screens.main.CollectKillChest()
+        this.screens.main.CollectChests()
     }
 }
