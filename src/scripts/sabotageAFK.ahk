@@ -18,8 +18,8 @@ class SabotageAFKScript extends ScriptBase {
 
         this.character.Heal()
 
+        this.WriteDebug("Varok hogy lassam a sabotage jatek veget")
         while(!this.screens.game.IsDontSaveVisible() && !this.screens.game.CanCollect()) {
-            this.WriteDebug("Varok hogy lassam a sabotage jatek veget")
 
             sleep 1000
         }

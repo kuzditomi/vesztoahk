@@ -6,6 +6,8 @@ class CharacterBase {
     }
 
     RandomMove(){
+        this.WriteDebug("Mozgok osszevissza...")
+
         Loop 2 {
             click 1500, 347
             MouseMove 154, 614

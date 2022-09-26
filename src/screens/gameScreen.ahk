@@ -7,6 +7,8 @@ class GameScreen extends ScreenBase {
     }
 
     Result() { 
+        this.WriteDebug("Resultra nyomok es kilepek")
+
         click 235, 956
         sleep 2500
 
