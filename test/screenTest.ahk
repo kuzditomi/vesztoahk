@@ -58,7 +58,7 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
 }
 
 ; ; Kép pixel szín keresés
- TestImage("images\battle_pals_decline.png", 783, 730, 0xFFFFFF)
+ TestImage("images\failed2.png", 1240, 265, 0x944204)
 
 ; base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8)
 
