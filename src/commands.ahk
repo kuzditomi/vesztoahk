@@ -1,10 +1,11 @@
 #Include %A_LineFile%\..\statistics.ahk
 
+^p::
+    Pause    
+Return
+
 #z::
     Statistics.Stop()
-    Pause    
-
-^!p::
     Pause    
 
 #y::

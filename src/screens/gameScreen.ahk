@@ -18,7 +18,7 @@ class GameScreen extends ScreenBase {
 
     IsDontSaveVisible() {
         ; Dont save - Piros gomb és arany medál
-        return (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8))
+        return (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(1050, 450, 0x8f6c02))
     }
 
     CanCollect() {

@@ -9,7 +9,7 @@ class CharacterBase {
         this.WriteDebug("Mozgok osszevissza...")
 
         Loop 2 {
-            click 1500, 347
+            ; click 1500, 347
             MouseMove 154, 614
             MouseClickDrag, Left, 154, 614, 185, 650, 80
             sleep 1500
@@ -17,6 +17,8 @@ class CharacterBase {
     }
 
     SingleRandomMove(){
+        this.WriteDebug("Mozgok osszevissza...")
+        
  ;       click 1500, 347
         MouseMove 154, 614
         MouseClickDrag, Left, 154, 614, 185, 650, 80
@@ -37,6 +39,7 @@ class CharacterBase {
     }
 
     WalkForward() {
+        MouseMove, 154, 614
         MouseClickDrag, Left, 154, 614, 154, 404, 80
     }
 

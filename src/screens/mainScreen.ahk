@@ -46,6 +46,7 @@ class MainScreen extends ScreenBase {
         ;If base.HasTextInRect("FAILED", [680, 250, 130,50]) 
         ;az X közepe sötétkék
         if (this.IsFailVisible()){
+            this.WriteDebug("Close Fail")
             base.Esc()
         }
     }
@@ -54,6 +55,7 @@ class MainScreen extends ScreenBase {
         ; If base.HasTextInRect("CONTRACTS", [730, 60, 225, 60])
         ; Contract felirat szine turkiz es az x kozepe vilagoskek
         if(base.IsPixelColor(1025, 90 , 0xFFe400) && base.IsPixelColor(1765, 90, 0xed8c0a)){
+            this.WriteDebug("Close Contract progress")
             click 1755, 95
         }
     }
@@ -61,7 +63,8 @@ class MainScreen extends ScreenBase {
     CloseLeaguesAdvance() {
         ; Popup felül nagyon kék alul sötét kék
         if(base.IsPixelColor(1350, 365, 0xEC8C0A) && base.IsPixelColor(1350, 800, 0x784709)){
-            this.Esc()
+            this.WriteDebug("Close League advance")
+            click 1710, 550
         }
     }
 
@@ -69,6 +72,7 @@ class MainScreen extends ScreenBase {
         ; if base.HasTextInRect("INVITE", [888, 325, 150,60]) 
         ; Piros gomb és a serleg aranybarna
         if (base.IsPixelColor(681, 655, 0x2247ED) && base.IsPixelColor(1270, 500, 0x076ee4)){
+            this.WriteDebug("Decline Invite")
             click 780, 695
         }
     }
@@ -77,7 +81,8 @@ class MainScreen extends ScreenBase {
     {
         ; If base.HasTextInRect("DONTS", [614, 750, 165,60]) {
         ; Piros gomb és arany medál
-        if (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8)){
+        if (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(1050, 450, 0x8f6c02)){
+            this.WriteDebug("Dontsave")
             click 614, 750
         }
     } 
@@ -85,6 +90,7 @@ class MainScreen extends ScreenBase {
     CloseOfferOutfit() {
         ;a gomb zöld
         if base.IsPixelColor(1344, 805 , 0x09c462) {
+            this.WriteDebug("Close Outfit Offer")
             ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
             click 1420, 230
             sleep 600
@@ -95,18 +101,21 @@ class MainScreen extends ScreenBase {
 
     CloseDeclineOffer(){
         if (base.IsPixelColor( 700, 750, 0x1F45EC) && base.IsPixelColor( 783, 730, 0xFFFFFF)) {
+            this.WriteDebug("Close Decline Offer")
             click 718, 710 
         }
     }
 
     CloseCollect(){
         if base.IsPixelColor(800, 900, 0x13CA6C) {
+            this.WriteDebug("CloseCollect")
             click 800, 900 
         }
     }
 
     CloseResult(){
         if (base.IsPixelColor(135, 950, 0xEB950F) && base.IsPixelColor(260, 955, 0xFFFFFF)) {
+            this.WriteDebug("Close result")
             click 235, 956 
         }
     }
@@ -116,6 +125,7 @@ class MainScreen extends ScreenBase {
         this.WriteDebug("Elkezdek minden szart bezarni")
 
         while(!this.CanPlay()){
+            this.WriteDebug("Ujra zarok")
             this.CloseFail()
             this.CloseBattlePalsOffer()
             this.CloseContractProgress()
@@ -157,7 +167,7 @@ class MainScreen extends ScreenBase {
         if (base.IsPixelColor(700, 925 , 0x27ABFE)){
             Statistics.CollectedKillChest()
 
-            click 320, 920 ;battle chest bal lent
+            click 700, 925 ;Kill chest bal lent
             sleep 1800
             this.Esc()
             sleep 1300

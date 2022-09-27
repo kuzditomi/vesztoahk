@@ -53,19 +53,19 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
     if(gameScreenPixelColor == imagePixelColor){
         MsgBox, Megegyezik a szin! %imagePixelColor%
     } else {
-        MsgBox, Kulonboynek! Jatek kepernyon: %gameScreenPixelColor% Kepen: %imagePixelColor%
+        MsgBox, Kulonboznek! Jatek kepernyon: %gameScreenPixelColor% Kepen: %imagePixelColor%
     }
 }
 
 ; ; Kép pixel szín keresés
- TestImage("images\failed2.png", 1240, 265, 0x944204)
+ TestImage("images\winstreak.png", 1050, 450, 0x8f6c2)
 
 ; base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8)
 
 ; Valódi játék képernyő pixel szín keresés
-; TestGameScreen( 490, 985, 0x3D0317)
+; TestGameScreen(850, 450, 0x8f6c02)
 
 ; Ellenőrzi hogy ugyanaz a játékképernyő és a képen lévő szín a pozíción
-; TestMatchingColorPositionWithImageAndGameScreen("images\main.png", 490, 985, 0x3D0317)
+; TestMatchingColorPositionWithImageAndGameScreen("images\winstreak.png", 700, 450, 0x00b0f8)
 
 ExitApp

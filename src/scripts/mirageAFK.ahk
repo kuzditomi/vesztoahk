@@ -13,24 +13,25 @@ class MirageAFKScript extends ScriptBase {
     Run() {
         this.screens.main.Play()
         this.screens.game.WaitForGameStart()
+        this.WriteDebug("Fut az AFK program")
 
-        this.character.WalkForward()
-
-        while(!this.screens.game.CanCollect()) {
-             ; Ha mar meghaltunk, nem kell csinalni semmit, csak varni
+        while(!this.screens.game.IsDontSaveVisible() && !this.screens.game.CanCollect()) {
+            ; Ha mar meghaltunk, nem kell csinalni semmit, csak varni
             if(this.screens.game.IsResultVisible()){
+                this.WriteDebug("Azt hiszem, meghaltam")
                 sleep 1000
             } else {
+            this.WriteDebug("Fut az AFK program")
             this.character.Heal()
             sleep 500
-
             this.character.BackJump()
             sleep 200
             this.character.WalkForward()
 
-            sleep 6200
+            sleep 8200
+            }
         }
-
+        this.WriteDebug("Vege a jateknak, kilepek")
         this.screens.game.Esc()
         this.screens.main.ClosePopupsAfterMatch()
         this.screens.main.CollectChests()

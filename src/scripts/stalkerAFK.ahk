@@ -13,10 +13,12 @@ class StalkerAFKScript extends ScriptBase {
     Run() {
         this.screens.main.Play()
         this.screens.game.WaitForGameStart()
+        this.WriteDebug("Fut az AFK program")
 
         while(!this.screens.game.CanCollect()) {
             ; Ha mar meghaltunk, nem kell csinalni semmit, csak varni
             if(this.screens.game.IsResultVisible()){
+                this.WriteDebug("Azt hiszem, meghaltam")
                 sleep 1000
             } else {
                 this.character.SingleRandomMove()
@@ -26,7 +28,7 @@ class StalkerAFKScript extends ScriptBase {
                 sleep 5000
             }
         }
-
+        this.WriteDebug("Vege a jateknak, kilepek")
         this.screens.game.Esc()
         this.screens.main.ClosePopupsAfterMatch()
         this.screens.main.CollectChests()
