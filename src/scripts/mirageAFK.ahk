@@ -16,8 +16,11 @@ class MirageAFKScript extends ScriptBase {
 
         this.character.WalkForward()
 
-        loop 15
-        {
+        while(!this.screens.game.CanCollect()) {
+             ; Ha mar meghaltunk, nem kell csinalni semmit, csak varni
+            if(this.screens.game.IsResultVisible()){
+                sleep 1000
+            } else {
             this.character.Heal()
             sleep 500
 
@@ -28,8 +31,9 @@ class MirageAFKScript extends ScriptBase {
             sleep 6200
         }
 
-        this.screens.game.Result()
+        this.screens.game.Esc()
         this.screens.main.ClosePopupsAfterMatch()
+        this.screens.main.CollectChests()
     }
 }
 

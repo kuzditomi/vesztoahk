@@ -29,6 +29,6 @@ class StalkerAFKScript extends ScriptBase {
 
         this.screens.game.Esc()
         this.screens.main.ClosePopupsAfterMatch()
-        this.screens.main.CollectWinChest()
+        this.screens.main.CollectChests()
     }
 }
