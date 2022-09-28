@@ -47,7 +47,7 @@ class MainScreen extends ScreenBase {
         ;az X közepe sötétkék
         if (this.IsFailVisible()){
             this.WriteDebug("Close Fail")
-            base.Esc()
+            click 1240, 265
         }
     }
 
@@ -154,12 +154,17 @@ class MainScreen extends ScreenBase {
             Statistics.CollectedWinChest()
             click 320, 920 ;battle chest bal lent
             sleep 1800
-            this.Esc()
+                loop 13
+                {
+                sleep 500
+                click 320, 996
+                }
             sleep 1300
             ; ClosContract progress - Contract felirat szine turkiz es az x kozepe vilagoskek
             if (base.IsPixelColor(1025, 90 , 0xFFe400) && base.IsPixelColor(1765, 90, 0xed8c0a))
-                this.Esc()
+           click 1755, 95
         }
+
     } 
 
     CollectKillChest() {
@@ -169,7 +174,11 @@ class MainScreen extends ScreenBase {
 
             click 700, 925 ;Kill chest bal lent
             sleep 1800
-            this.Esc()
+                loop 13
+                {
+                sleep 500
+                click 700, 925
+                }
             sleep 1300
             ; ClosContract progress - Contract felirat szine turkiz es az x kozepe vilagoskek
             if (base.IsPixelColor(1025, 90 , 0xFFe400) && base.IsPixelColor(1765, 90, 0xed8c0a))

@@ -27,7 +27,9 @@ Run() {
             this.character.Heal()
             sleep 50
             this.character.SingleRandomMove()
-
+            if (this.screens.game.IsDontSaveVisible() || this.screens.game.CanCollect()) {
+                break
+                }
             sleep 12000
             }
         }
