@@ -14,15 +14,28 @@ class FireFly2GrenadeScript extends ScriptBase {
         this.screens.main.Play()
         this.screens.game.WaitForGameStart()
 
-        this.character.SingleRandomMove()
+        ; this.character.SingleRandomMove()
         this.character.ThrowGrenade()
         this.character.WalkIntoGrenade()
         this.character.Heal()
-        sleep 8200
-        this.character.Heal()
-        sleep 600
-        this.character.ThrowGrenade()
+        this.character.TurnBack()
         this.character.WalkIntoGrenade()
+
+        sleep 5000
+        this.character.Heal()
+
+        while(!this.screens.game.IsResultVisible()){
+            this.character.ThrowGrenade()
+            this.character.WalkIntoGrenade()
+            sleep 4000
+
+            if(this.screens.main.IsFailVisible()){
+                break
+            }
+            
+            this.character.TurnBack()
+        }
+        this.WriteDebug("Felrobbantam magam es vege a jateknak")
 
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()

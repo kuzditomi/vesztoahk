@@ -33,6 +33,6 @@ class FreddieBukoScript extends ScriptBase {
 
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()
-        this.screens.main.CollectChests()
+        ; this.screens.main.CollectChests()
     }
 }
