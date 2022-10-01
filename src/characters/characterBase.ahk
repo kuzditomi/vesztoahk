@@ -27,6 +27,7 @@ class CharacterBase {
 
     Heal() {
         click 1670, 420
+        sleep 300
     }
 
     MainAction() {

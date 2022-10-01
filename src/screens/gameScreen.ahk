@@ -36,14 +36,19 @@ class GameScreen extends ScreenBase {
         this.WriteDebug("Indul a visszaszamlalas...")
 
         ; Visszaszámlálás 5től meg még 2-3mp töltés
-        sleep 9000
+        While !base.IsPixelColor(1482, 483, 0xe4c99c) {
+            sleep 500
+        } 
+        
     }
 
     IsSabotageCharacterChoosing() {
         return base.IsPixelColor(661, 985, 0xC87700)
     }
 
-    WaitForSabotageStart() {
+ /*
+
+   WaitForSabotageStart() {
         this.WriteDebug("Varom hogy kezdodjon a sabotage")
         
         While (!this.IsSabotageCharacterChoosing()) {
@@ -54,6 +59,7 @@ class GameScreen extends ScreenBase {
         ; Visszaszámlálás 11től meg még 2-3mp töltés
         sleep 15000
     }
+    */
 
     DeclineWinstreak() {
         sleep 3000

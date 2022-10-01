@@ -14,7 +14,7 @@ class SabotageAFKScript extends ScriptBase {
         this.WriteDebug("Inditom a jatekot a PLAY-el")
 
         this.screens.main.Play()
-        this.screens.game.WaitForSabotageStart()
+        this.screens.game.WaitForGameStart()
 
         this.character.Heal()
 

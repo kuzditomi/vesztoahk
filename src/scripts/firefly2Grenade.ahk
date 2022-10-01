@@ -13,7 +13,6 @@ class FireFly2GrenadeScript extends ScriptBase {
     Run() {
         this.screens.main.Play()
         this.screens.game.WaitForGameStart()
-
         ; this.character.SingleRandomMove()
         this.character.ThrowGrenade()
         this.character.WalkIntoGrenade()
@@ -21,7 +20,7 @@ class FireFly2GrenadeScript extends ScriptBase {
         this.character.TurnBack()
         this.character.WalkIntoGrenade()
 
-        sleep 5000
+        sleep 7000
         this.character.Heal()
 
         while(!this.screens.game.IsResultVisible()){
