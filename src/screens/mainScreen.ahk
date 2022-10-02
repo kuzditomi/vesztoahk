@@ -159,6 +159,7 @@ class MainScreen extends ScreenBase {
             this.CloseResult()
             this.CloseCollect()
             this.CloseFun()
+            this.CloseFestival()
 
             sleep 500
         } 
