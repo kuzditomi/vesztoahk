@@ -131,6 +131,17 @@ class MainScreen extends ScreenBase {
         }
     }
 
+    IsFestivalVisible() {
+        return base.IsPixelColor(1340, 220, 0x944204)
+    }
+
+    CloseFestival(){
+       if (this.IsFestivalVisible()){
+            this.WriteDebug("Close Fun")
+            click 1320, 327 
+        }
+    }
+
     ClosePopupsAfterMatch() {
         sleep 1500
         this.WriteDebug("Elkezdek minden szart bezarni")
