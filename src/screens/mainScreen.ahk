@@ -120,6 +120,17 @@ class MainScreen extends ScreenBase {
         }
     }
 
+    IsFunVisible() {
+        return base.IsPixelColor(1320, 327, 0x944204)
+    }
+
+    CloseFun(){
+       if (this.IsFunVisible()){
+            this.WriteDebug("Close Fun")
+            click 1320, 327 
+        }
+    }
+
     ClosePopupsAfterMatch() {
         sleep 1500
         this.WriteDebug("Elkezdek minden szart bezarni")
@@ -136,6 +147,7 @@ class MainScreen extends ScreenBase {
             this.DontSave()
             this.CloseResult()
             this.CloseCollect()
+            this.CloseFun()
 
             sleep 500
         } 

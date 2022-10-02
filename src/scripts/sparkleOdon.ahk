@@ -15,13 +15,14 @@ class SparkleOdonScript extends ScriptBase {
         this.screens.game.WaitForGameStart()
 
         ; while(!this.screens.game.IsResultVisible() && !this.screens.MainScreen.CloseFail()){
-            this.character.SingleRandomMove()
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
             this.character.Heal()
-            sleep 5500
+            this.character.TurnBack()
+            this.character.WalkIntoGrenade()
+            sleep 3500
             this.character.Heal()
-            sleep 1700
+            sleep 3300
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
         

@@ -12,7 +12,7 @@ class CharacterBase {
             ; click 1500, 347
             MouseMove 154, 614
             MouseClickDrag, Left, 154, 614, 185, 650, 80
-            sleep 1500
+            sleep 1300
         }
     }
 

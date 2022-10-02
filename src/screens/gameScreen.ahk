@@ -36,7 +36,7 @@ class GameScreen extends ScreenBase {
         this.WriteDebug("Indul a visszaszamlalas...")
 
         ; Visszaszámlálás 5től meg még 2-3mp töltés
-        While !base.IsPixelColor(1482, 483, 0xe4c99c) {
+        While (!base.IsPixelColor(1482, 483, 0xe4c99c) && !base.IsPixelColor(1689, 359, 0xe4c99c)){
             sleep 500
         } 
         
