@@ -15,7 +15,7 @@ class StalkerAFKScript extends ScriptBase {
         this.screens.game.WaitForGameStart()
         this.WriteDebug("Fut az AFK program")
 
-        while(!this.screens.game.CanCollect()) {
+        while(!this.screens.game.IsDontSaveVisible() && !this.screens.game.CanCollect()) {
             ; Ha mar meghaltunk, nem kell csinalni semmit, csak varni
             if(this.screens.game.IsResultVisible()){
                 this.WriteDebug("Azt hiszem, meghaltam")
