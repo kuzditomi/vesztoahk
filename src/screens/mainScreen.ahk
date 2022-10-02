@@ -43,7 +43,6 @@ class MainScreen extends ScreenBase {
     }
 
     CloseFail() {
-        ;If base.HasTextInRect("FAILED", [680, 250, 130,50]) 
         ;az X közepe sötétkék
         if (this.IsFailVisible()){
             this.WriteDebug("Close Fail")
@@ -121,6 +120,7 @@ class MainScreen extends ScreenBase {
     }
 
     IsFunVisible() {
+        ;az X közepe sötétkék
         return base.IsPixelColor(1320, 327, 0x944204)
     }
 
@@ -132,12 +132,13 @@ class MainScreen extends ScreenBase {
     }
 
     IsFestivalVisible() {
+        ;az X közepe sötétkék
         return base.IsPixelColor(1340, 220, 0x944204)
     }
 
     CloseFestival(){
        if (this.IsFestivalVisible()){
-            this.WriteDebug("Close Fun")
+            this.WriteDebug("Close Festival")
             click 1340, 220 
         }
     }
