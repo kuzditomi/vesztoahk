@@ -15,8 +15,8 @@ class MainScreen extends ScreenBase {
 
     CloseBattlePalsOffer() {
         ; Sötétkék X körül és egy darab az egyik betűbúl fehér
-        if (base.IsPixelColor(1420, 260 , 0x7F2330) && base.IsPixelColor(1046, 236 , 0xFFEBF4)) {
-            base.Esc()
+        if (base.IsPixelColor(1420, 260 , 0x7F2330) && base.IsPixelColor(1420, 225 , 0xFFFFFF)) {
+            click 1420, 225
 
             sleep 500
 
@@ -138,7 +138,7 @@ class MainScreen extends ScreenBase {
     CloseFestival(){
        if (this.IsFestivalVisible()){
             this.WriteDebug("Close Fun")
-            click 1320, 327 
+            click 1340, 220 
         }
     }
 
