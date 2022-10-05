@@ -146,7 +146,7 @@ class MainScreen extends ScreenBase {
     ClosePopupsAfterMatch() {
         sleep 1500
         this.WriteDebug("Elkezdek minden szart bezarni")
-
+            this.CloseCollect()
         while(!this.CanPlay()){
             this.WriteDebug("Ujra zarok")
             this.CloseFail()
