@@ -17,12 +17,16 @@ class FreddieBukoScript extends ScriptBase {
         this.character.RandomMove()
 
         ; nem sikerült belehalni az első bombába
-        while(!this.screens.game.IsResultVisible()){
+        while(!this.screens.game.IsResultVisible()) {
+            this.WriteDebug("Kovetkezo bomba")
+
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
             sleep 4000
 
             if(this.screens.main.IsFailVisible()){
+                this.WriteDebug("Tul hamar meghaltam")
+
                 break
             }
             
@@ -33,6 +37,5 @@ class FreddieBukoScript extends ScriptBase {
 
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()
-        ; this.screens.main.CollectChests()
     }
 }

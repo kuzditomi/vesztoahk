@@ -31,6 +31,7 @@ class MirageAFKScript extends ScriptBase {
             sleep 8200
             }
         }
+        
         this.WriteDebug("Vege a jateknak, kilepek")
         this.screens.game.Esc()
         this.screens.main.ClosePopupsAfterMatch()

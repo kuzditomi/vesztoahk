@@ -13,7 +13,7 @@ class FireFly2GrenadeScript extends ScriptBase {
     Run() {
         this.screens.main.Play()
         this.screens.game.WaitForGameStart()
-        ; this.character.SingleRandomMove()
+
         this.character.ThrowGrenade()
         this.character.WalkIntoGrenade()
         this.character.Heal()
@@ -24,17 +24,22 @@ class FireFly2GrenadeScript extends ScriptBase {
         this.character.Heal()
 
         while(!this.screens.game.IsResultVisible()){
+            this.WriteDebug("Kovetkezo bomba")
+
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
             sleep 4000
 
-            if(this.screens.main.IsFailVisible()){
+            if(this.screens.main.IsFailVisible()) {
+                this.WriteDebug("Tul hamar meghaltam")
+
                 break
             }
             
             this.character.TurnBack()
         }
-        this.WriteDebug("Felrobbantam magam es vege a jateknak")
+
+        this.WriteDebug("Vege a jateknak")
 
         this.screens.game.Result()
         this.screens.main.ClosePopupsAfterMatch()

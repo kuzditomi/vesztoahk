@@ -68,7 +68,7 @@ class MainScreen extends ScreenBase {
     }
 
     DeclineInvite() {
-        ; if base.HasTextInRect("INVITE", [888, 325, 150,60]) 
+        ; if base.HasTextInRect("INVITE", [888, 325, 150,60])
         ; Piros gomb és a serleg aranybarna
         if (base.IsPixelColor(681, 655, 0x2247ED) && base.IsPixelColor(1270, 500, 0x076ee4)){
             this.WriteDebug("Decline Invite")
@@ -76,15 +76,13 @@ class MainScreen extends ScreenBase {
         }
     }
 
-    DontSave() 
-    {
-        ; If base.HasTextInRect("DONTS", [614, 750, 165,60]) {
+    CloseStreakDontSave() {
         ; Piros gomb és arany medál
         if (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(1050, 450, 0x8f6c02)){
-            this.WriteDebug("Dontsave")
+            this.WriteDebug("CloseStreakDontSave ")
             click 614, 750
         }
-    } 
+    }
 
     CloseOfferOutfit() {
         ;a gomb zöld
@@ -93,7 +91,7 @@ class MainScreen extends ScreenBase {
             ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
             click 1420, 230
             sleep 600
-        
+
             this.CloseDeclineOffer()
         }
     }
@@ -101,54 +99,43 @@ class MainScreen extends ScreenBase {
     CloseDeclineOffer(){
         if (base.IsPixelColor( 700, 750, 0x1F45EC) && base.IsPixelColor( 783, 730, 0xFFFFFF)) {
             this.WriteDebug("Close Decline Offer")
-            click 718, 710 
+            click 718, 710
         }
     }
 
     CloseCollect(){
         if base.IsPixelColor(800, 900, 0x13CA6C) {
             this.WriteDebug("CloseCollect")
-            click 800, 900 
+            click 800, 900
         }
     }
 
     CloseResult(){
         if (base.IsPixelColor(135, 950, 0xEB950F) && base.IsPixelColor(260, 955, 0xFFFFFF)) {
             this.WriteDebug("Close result")
-            click 235, 956 
+            click 235, 956
         }
-    }
-
-    IsFunVisible() {
-        ;az X közepe sötétkék
-        return base.IsPixelColor(1320, 327, 0x944204)
     }
 
     CloseFun(){
-       if (this.IsFunVisible()){
+        if (base.IsPixelColor(1320, 327, 0x944204)){
             this.WriteDebug("Close Fun")
-            click 1320, 327 
+            click 1320, 327
         }
     }
 
-    IsFestivalVisible() {
-        ;az X közepe sötétkék
-        return base.IsPixelColor(1340, 220, 0x944204)
-    }
-
     CloseFestival(){
-       if (this.IsFestivalVisible()){
+        if (base.IsPixelColor(1340, 220, 0x944204)){
             this.WriteDebug("Close Festival")
-            click 1340, 220 
+            click 1340, 220
         }
     }
 
     ClosePopupsAfterMatch() {
-        sleep 1500
         this.WriteDebug("Elkezdek minden szart bezarni")
-            this.CloseCollect()
+        
         while(!this.CanPlay()){
-            this.WriteDebug("Ujra zarok")
+            this.WriteDebug("Zarogatok...")
             this.CloseFail()
             this.CloseBattlePalsOffer()
             this.CloseContractProgress()
@@ -156,14 +143,14 @@ class MainScreen extends ScreenBase {
             this.CloseOfferOutfit()
             this.CloseLeaguesAdvance()
             this.DeclineInvite()
-            this.DontSave()
+            this.CloseStreakDontSave()
             this.CloseResult()
             this.CloseCollect()
             this.CloseFun()
             this.CloseFestival()
 
             sleep 500
-        } 
+        }
     }
 
     CollectChests() {
@@ -179,18 +166,18 @@ class MainScreen extends ScreenBase {
             Statistics.CollectedWinChest()
             click 320, 920 ;battle chest bal lent
             sleep 1800
-                loop 13
-                {
+            loop 13
+            {
                 sleep 500
                 click 320, 996
-                }
+            }
             sleep 1300
             ; ClosContract progress - Contract felirat szine turkiz es az x kozepe vilagoskek
             if (base.IsPixelColor(1025, 90 , 0xFFe400) && base.IsPixelColor(1765, 90, 0xed8c0a))
-           click 1755, 95
+                click 1755, 95
         }
 
-    } 
+    }
 
     CollectKillChest() {
         ; Sárga a ládától jobbra
@@ -199,15 +186,15 @@ class MainScreen extends ScreenBase {
 
             click 700, 925 ;Kill chest bal lent
             sleep 1800
-                loop 13
-                {
+            loop 13
+            {
                 sleep 500
                 click 700, 925
-                }
+            }
             sleep 1300
             ; ClosContract progress - Contract felirat szine turkiz es az x kozepe vilagoskek
             if (base.IsPixelColor(1025, 90 , 0xFFe400) && base.IsPixelColor(1765, 90, 0xed8c0a))
                 this.Esc()
         }
-    } 
+    }
 }
