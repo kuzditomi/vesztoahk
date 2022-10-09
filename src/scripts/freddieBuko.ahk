@@ -7,7 +7,7 @@ class FreddieBukoScript extends ScriptBase {
     }
 
     GetIntroductionText() {
-        return this.character.GetIntroductionText("egy granatos onmegsemmito") 
+        return this.character.GetIntroductionText("egy granatos onmegsemmito")
     }
 
     Run() {
@@ -15,22 +15,22 @@ class FreddieBukoScript extends ScriptBase {
         this.screens.game.WaitForGameStart()
 
         this.character.RandomMove()
+        this.character.ThrowGrenade()
+        this.character.WalkIntoGrenade()
+        sleep 4000
 
-        ; nem sikerült belehalni az első bombába
         while(!this.screens.game.IsResultVisible()) {
             this.WriteDebug("Kovetkezo bomba")
-
+            this.character.TurnBack()
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
-            sleep 4000
 
             if(this.screens.main.IsFailVisible()){
                 this.WriteDebug("Tul hamar meghaltam")
-
                 break
             }
-            
-            this.character.TurnBack()
+
+            sleep 4000
         }
 
         this.WriteDebug("Felrobbantam magam es vege a jateknak")
