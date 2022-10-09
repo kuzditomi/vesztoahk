@@ -17,15 +17,16 @@ class SparkleTomiScript extends ScriptBase {
         this.character.ThrowGrenade()
         this.character.WalkIntoGrenade()
         this.character.Heal()
+        this.character.TurnBack()
+        this.character.WalkIntoGrenade()
+        sleep 3000
 
         ; nem sikerült belehalni az első bombába
         while(!this.screens.game.IsResultVisible()){
             this.character.TurnBack()
-            sleep 2000
-
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
-            sleep 4000
+            sleep 3000
 
             if(this.screens.main.IsFailVisible()){
                 break

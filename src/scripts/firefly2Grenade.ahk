@@ -20,7 +20,7 @@ class FireFly2GrenadeScript extends ScriptBase {
         this.character.TurnBack()
         this.character.WalkIntoGrenade()
 
-        sleep 7000
+        sleep 4000
         this.character.Heal()
 
         while(!this.screens.game.IsResultVisible()){

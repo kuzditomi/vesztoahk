@@ -14,6 +14,8 @@ class GameScreen extends ScreenBase {
 
         ; Ez bezárja a winstreak ablakot is, nem kell DeclineWinstreak !!!
         this.Esc()
+
+        sleep 1000
     }
 
     IsDontSaveVisible() {
