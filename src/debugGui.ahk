@@ -11,6 +11,10 @@ class DebugGui {
         Gui, DebugGui:Show, h100 w400 x1000 y900
     }
 
+    Hide() {
+        Gui, DebugGui:Show, Minimize
+    }
+
     Write(debugMessage) {
         GuiControl,DebugGui:Text, debugText, % debugMessage
     }

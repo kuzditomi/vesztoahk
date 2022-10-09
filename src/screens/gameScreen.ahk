@@ -9,7 +9,7 @@ class GameScreen extends ScreenBase {
     Result() { 
         this.WriteDebug("Resultra nyomok es kilepek")
 
-        click 235, 956
+        this.Click(235,956)
         sleep 2500
 
         ; Ez bezárja a winstreak ablakot is, nem kell DeclineWinstreak !!!

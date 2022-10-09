@@ -18,8 +18,11 @@ TestImage(imagePath, x, y, pixelColor)
     isPixelColorExpected := ScreenBase.IsPixelColor(x,y,pixelColor)
 
     if(!isPixelColorExpected){
-        PixelGetColor, actualPixelColor, % x, % y
-        MouseMove, % x, % y 
+        newX := ScreenBase.ScaleX(x)
+        newY := ScreenBase.ScaleY(y)
+
+        PixelGetColor, actualPixelColor, % newX, % newY
+        MouseMove, % newX, % newY 
         MsgBox, Valami nemjo a %imagePath% teszttel. valodi szin: %actualPixelColor%
     }
 
@@ -58,7 +61,7 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
 }
 
 ; ; Kép pixel szín keresés
- TestImage("images\battle_pals.png", 1420, 225 , 0xFFFFFF)
+ TestImage("images\kiskepernyo.png", 662, 986, 0xC87700)
 
 ; base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8)
 

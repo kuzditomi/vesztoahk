@@ -1,37 +1,32 @@
 #Include %A_LineFile%\..\..\debugGui.ahk
+#Include %A_LineFile%\..\..\baseClass.ahk
 
-class CharacterBase {
-    WriteDebug(message) {
-        DebugGui.Write(message)
-    }
-
-    RandomMove(){
+class CharacterBase extends MyBaseClass {
+    RandomMove() {
         this.WriteDebug("Mozgok osszevissza...")
 
         Loop 2 {
-            ; click 1500, 347
-            MouseMove 154, 614
-            MouseClickDrag, Left, 154, 614, 185, 650, 80
+            ; this.Click(1500,347)
+            MouseClickDrag, Left, 70, 300, 90, 300, 80
             sleep 1300
         }
     }
 
-    SingleRandomMove(){
+    SingleRandomMove() {
         this.WriteDebug("Mozgok osszevissza...")
         
- ;       click 1500, 347
         MouseMove 154, 614
         MouseClickDrag, Left, 154, 614, 185, 650, 80
         sleep 250
     }
 
     Heal() {
-        click 1670, 420
+        this.Click(1670,420)
         sleep 300
     }
 
     MainAction() {
-        click 1500, 547
+        this.Click(1500,547)
     }
 
     TurnBack() {

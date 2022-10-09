@@ -1,25 +1,28 @@
 #Include %A_LineFile%\..\..\debugGui.ahk
+#Include %A_LineFile%\..\..\baseClass.ahk
 
-CoordMode, ToolTip, Screen
-CoordMode, Pixel, Screen
-CoordMode, Mouse, Screen
-
-class ScreenBase {
+class ScreenBase extends MyBaseClass {
     WriteDebug(message) {
         DebugGui.Write(message)
     }
 
     ActivateBlueStack() {
-        IfWinExist BlueStacks
+        if WinExist("BlueStacks"){
             WinActivate
-            
-        ; A bal oldali fekete savba lehet batran kattintgatni
-        Click, 5, 45
+
+            ; A bal oldali fekete savba lehet batran kattintgatni
+            Click, 400, 39
+        }
     }
 
     IsPixelColor(x,y,color) {
-        this.ActivateBlueStack()
-        PixelGetColor, c, % x, % y
+        ; this.ActivateBlueStack()
+
+        newX := this.ScaleX(x)
+        newY := this.ScaleY(y)
+
+        PixelGetColor, c, %newX%, %newY%
+
         return c == color
     }
 

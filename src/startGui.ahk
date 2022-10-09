@@ -5,7 +5,7 @@ global introductionText
 class StartGui {
     __New() {
         this.x := 20
-        this.y := 100
+        this.y := 70
     }
 
     Open(selectFunction, startFunction) {
@@ -43,6 +43,10 @@ class StartGui {
         this.x := 20
         this.y += 90
         this.AddButton("Sabotage AFK", "sabotageAFK")
+
+        this.x := 20
+        this.y += 90
+        this.AddButton("Test script", "testScript")
 
         Gui Add, Text, x620 y100 w350 h250 vintroductionText
 

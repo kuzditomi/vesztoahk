@@ -1,4 +1,4 @@
-#Warn All, StdOut
+#Warn All
 #Include src\startGui.ahk
 #Include src\scripts\freddieBuko.ahk
 #Include src\scripts\firefly2Grenade.ahk
@@ -9,7 +9,12 @@
 #Include src\scripts\sparkleTomi.ahk
 #Include src\scripts\stalkerAFK.ahk
 #include src\scripts\sabotageAFK.ahk
+#include src\scripts\testScript.ahk
 #include src\debugGui.ahk
+
+CoordMode, ToolTip, Screen
+CoordMode, Pixel, Screen
+CoordMode, Mouse, Screen
 
 global currentScript
 global scriptToRun
@@ -56,6 +61,9 @@ SelectScript(scriptName) {
         Case "sabotageAFK":{
             currentScript := new SabotageAFKScript()
         }
+        Case "testScript":{
+            currentScript := new TestScript()
+        }
         Default: {
             MsgBox, "Valami hiba tortent :("
             ExitApp
@@ -74,6 +82,11 @@ RunScript() {
         return
     }
 
+    if WinExist("BlueStacks"){
+        WinActivate
+        WinMove, BlueStacks,, 0, 0, 960,540
+    }
+
     Statistics.Start()
     DebugGui.Init()
     DebugGui.Show()
@@ -81,7 +94,6 @@ RunScript() {
     Loop {
         scriptToRun.Run()
         Statistics.RecordRun()
-        sleep 2000
     }
 }
 
