@@ -22,10 +22,13 @@ class StartGui {
         this.AddButton("Firefly 2 granat buko", "firefly2Grenade")
 
         this.x += 120
-        this.AddButton("Sparkle Odon", "sparkleOdon")
+        this.AddButton("Sparkle", "sparkle")
 
-        this.x += 120
-        this.AddButton("Sparkle Max", "Sparkle2Grenade")
+       /*
+
+         this.x += 120
+        this.AddButton("Sparkle Max", "Sparkle2Grenade") 
+        */
         
         this.x += 120
         this.AddButton("Sparkle Tomi", "sparkleTomi")

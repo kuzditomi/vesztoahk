@@ -1,7 +1,7 @@
 #Include %A_LineFile%\..\scriptBase.ahk
 #Include %A_LineFile%\..\..\characters\sparkleCharacter.ahk
 
-class SparkleOdonScript extends ScriptBase {
+class SparkleScript extends ScriptBase {
     __New(){
         this.character := new SparkleCharacter()
     }

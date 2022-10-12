@@ -4,7 +4,7 @@
 #Include src\scripts\firefly2Grenade.ahk
 #Include src\scripts\cyclopsAFK.ahk
 #Include src\scripts\mirageAFK.ahk
-#Include src\scripts\sparkleOdon.ahk
+#Include src\scripts\sparkle.ahk
 #Include src\scripts\SparkleMax2Granat.ahk
 #Include src\scripts\sparkleTomi.ahk
 #Include src\scripts\stalkerAFK.ahk
@@ -41,8 +41,8 @@ SelectScript(scriptName) {
         Case "mirageAFK":{
             currentScript := new MirageAFKScript()
         }
-        Case "sparkleOdon":{
-            currentScript := new SparkleOdonScript()
+        Case "sparkle":{
+            currentScript := new SparkleScript()
         }
         Case "Sparkle2Grenade":{
             currentScript := new Sparkle2Grenade()
