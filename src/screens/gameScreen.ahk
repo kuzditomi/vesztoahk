@@ -14,8 +14,6 @@ class GameScreen extends ScreenBase {
 
         ; Ez bezárja a winstreak ablakot is, nem kell DeclineWinstreak !!!
         this.Esc()
-
-        sleep 1000
     }
 
     IsDontSaveVisible() {
@@ -31,13 +29,15 @@ class GameScreen extends ScreenBase {
     WaitForGameStart() {
         this.WriteDebug("Varom a kovetkezo kort!")
 
-        While !base.IsPixelColor(661, 985, 0xC87700) {
+     /*
+
+   While !base.IsPixelColor(661, 985, 0xC87700) {
             sleep 500
         }
 
         this.WriteDebug("Indul a visszaszamlalas...")
-
-        ; Visszaszámlálás 5től meg még 2-3mp töltés
+*/
+        ; Ability vagy a heal villám töltve van
         While (!base.IsPixelColor(1482, 483, 0xe4c99c) && !base.IsPixelColor(1689, 359, 0xe4c99c)){
             sleep 500
         } 
