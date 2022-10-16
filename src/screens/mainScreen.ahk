@@ -138,7 +138,7 @@ class MainScreen extends ScreenBase {
 
     CloseLeague(){  
         if (this.WhenLeague()){
-            this.WriteDebug("Close League")
+            this.WriteDebug("Liga fordulo... begyujtom")
             click 1280, 875
             sleep 1000
             loop 4
@@ -152,7 +152,8 @@ class MainScreen extends ScreenBase {
     ClosePopupsAfterMatch() {
         this.WriteDebug("Elkezdek minden szart bezarni")
         
-        while(!this.CanPlay()){
+        ; while(!this.CanPlay())
+        loop{
             this.WriteDebug("Zarogatok...")
             this.CloseFail()
             this.CloseBattlePalsOffer()
@@ -169,6 +170,8 @@ class MainScreen extends ScreenBase {
             this.CloseLeague()
 
             sleep 500
+            if (this.CanPlay())
+            break
         }
     }
 
