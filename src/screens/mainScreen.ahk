@@ -141,9 +141,9 @@ class MainScreen extends ScreenBase {
             this.WriteDebug("Close League")
             click 1280, 875
             sleep 1000
-            loop 3
+            loop 4
             {
-            click 1280, 875
+            click 1780, 675
             sleep 500
             }
         }
@@ -205,7 +205,7 @@ class MainScreen extends ScreenBase {
 
             click 700, 925 ;Kill chest bal lent
             sleep 1800
-            loop 13
+            loop 10
             {
                 sleep 500
                 click 700, 925
