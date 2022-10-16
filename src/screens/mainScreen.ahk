@@ -170,8 +170,9 @@ class MainScreen extends ScreenBase {
             this.CloseLeague()
 
             sleep 500
-            if (this.CanPlay())
+            if (this.CanPlay()){
             break
+            }
         }
     }
 
