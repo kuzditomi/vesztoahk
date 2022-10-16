@@ -39,11 +39,11 @@ class MainScreen extends ScreenBase {
     }
 
     IsFailVisible() {
+        ;az X közepe sötétkék
         return base.IsPixelColor(1240, 265, 0x944204)
     }
 
     CloseFail() {
-        ;az X közepe sötétkék
         if (this.IsFailVisible()){
             this.WriteDebug("Close Fail")
             click 1240, 265
@@ -131,6 +131,24 @@ class MainScreen extends ScreenBase {
         }
     }
 
+    WhenLeague(){
+        ; kék felső és zöld gomb
+        base.IsPixelColor(1420, 225 , 0x662408) && base.IsPixelColor(1280, 875 , 0x13ca6b)
+        }
+
+    CloseLeague(){  
+        if (this.WhenLeague()){
+            this.WriteDebug("Close League")
+            click 1280, 875
+            sleep 1000
+            loop 3
+            {
+            click 1280, 875
+            sleep 500
+            }
+        }
+    }
+     
     ClosePopupsAfterMatch() {
         this.WriteDebug("Elkezdek minden szart bezarni")
         
@@ -148,6 +166,7 @@ class MainScreen extends ScreenBase {
             this.CloseCollect()
             this.CloseFun()
             this.CloseFestival()
+            this.CloseLeague()
 
             sleep 500
         }

@@ -28,7 +28,7 @@ class FireFly2GrenadeScript extends ScriptBase {
 
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
-            sleep 4000
+            sleep 6000
 
             if(this.screens.main.IsFailVisible()) {
                 this.WriteDebug("Tul hamar meghaltam")
