@@ -20,7 +20,7 @@ class FireFly2GrenadeScript extends ScriptBase {
         this.character.TurnBack()
         this.character.WalkIntoGrenade()
 
-        sleep 4000
+        sleep 6000
         this.character.Heal()
 
         while(!this.screens.game.IsResultVisible()){
@@ -28,7 +28,7 @@ class FireFly2GrenadeScript extends ScriptBase {
 
             this.character.ThrowGrenade()
             this.character.WalkIntoGrenade()
-            sleep 6000
+            sleep 4000
 
             if(this.screens.main.IsFailVisible()) {
                 this.WriteDebug("Tul hamar meghaltam")
