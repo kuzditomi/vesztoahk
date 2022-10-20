@@ -133,7 +133,7 @@ class MainScreen extends ScreenBase {
 
     WhenLeague(){
         ; kék felső és zöld gomb
-        base.IsPixelColor(1420, 225 , 0x662408) && base.IsPixelColor(1280, 875 , 0x13ca6b)
+        base.IsPixelColor(1420, 225 , 0x662408) && base.IsPixelColor(1280, 875 , 0x13ca6c)
         }
 
     CloseLeague(){  

@@ -58,7 +58,7 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
 }
 
 ; ; Kép pixel szín keresés
- TestImage("images\10_orai_valtas.png", 1280, 875 , 0x13ca6b)
+ TestImage("images\10_orai_valtas.png", 1750, 950, 0x09C563)
 
 ; base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8)
 
