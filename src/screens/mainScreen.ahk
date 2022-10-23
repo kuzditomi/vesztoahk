@@ -33,9 +33,9 @@ class MainScreen extends ScreenBase {
             ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
             click 1417, 225
             sleep 600
-        }
 
-        this.CloseDeclineOffer()
+            this.CloseDeclineOffer()
+        }
     }
 
     IsFailVisible() {
@@ -134,26 +134,42 @@ class MainScreen extends ScreenBase {
     WhenLeague(){
         ; kék felső és zöld gomb
         base.IsPixelColor(1420, 225 , 0x662408) && base.IsPixelColor(1280, 875 , 0x13ca6c)
-        }
+    }
 
-    CloseLeague(){  
+    CloseLeague(){
         if (this.WhenLeague()){
             this.WriteDebug("Liga fordulo... begyujtom")
             click 1280, 875
             sleep 1000
             loop 4
             {
-            click 1780, 675
-            sleep 500
+                click 1780, 675
+                sleep 500
             }
         }
     }
-     
+
+    TryToCloseUnknownPopup() {
+        ; Eddig ismeretlen ablakra nyomok egy esc-et
+        if(this.CanPlay()) {
+            return
+        }
+
+        this.Esc()
+        sleep 500
+
+        ; Ha esetleg még decline is kéne, azt is megpróbáljuk
+        this.CloseDeclineOffer()
+    }
+
     ClosePopupsAfterMatch() {
         this.WriteDebug("Elkezdek minden szart bezarni")
-        
-        ; while(!this.CanPlay())
-        loop{
+
+        loopCounter := 1
+        loop {
+            sleep 1000
+            loopCounter++
+
             this.WriteDebug("Zarogatok...")
             this.CloseFail()
             this.CloseBattlePalsOffer()
@@ -169,9 +185,14 @@ class MainScreen extends ScreenBase {
             this.CloseFestival()
             this.CloseLeague()
 
+            if(loopCounter > 2) {
+                this.TryToCloseUnknownPopup()
+            }
+
             sleep 500
+
             if (this.CanPlay()){
-            break
+                break
             }
         }
     }
