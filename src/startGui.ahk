@@ -17,6 +17,9 @@ class StartGui {
 
         this.AddButton("Freddie buko", "freddieBuko")
 
+        this.x += 120
+        this.AddButton("FireFly Supreme", "fireflySupreme")
+
         this.y += 90
         this.x := 20
         this.AddButton("Firefly 2 granat buko", "firefly2Grenade")

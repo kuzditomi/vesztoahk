@@ -2,6 +2,7 @@
 #Include src\startGui.ahk
 #Include src\scripts\freddieBuko.ahk
 #Include src\scripts\firefly2Grenade.ahk
+#Include src\scripts\fireflySupreme.ahk
 #Include src\scripts\cyclopsAFK.ahk
 #Include src\scripts\mirageAFK.ahk
 #Include src\scripts\sparkle.ahk
@@ -31,6 +32,9 @@ SelectScript(scriptName) {
     {
         Case "freddieBuko":{
             currentScript := new FreddieBukoScript()
+        }
+        Case "fireflySupreme":{
+            currentScript := new FireFlySupremeScript()
         }
         Case "firefly2Grenade":{
             currentScript := new FireFly2GrenadeScript()
