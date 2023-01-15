@@ -30,8 +30,7 @@ class MainScreen extends ScreenBase {
     CloseOffer() {
         ;az X közepe sötétkék
         if base.IsPixelColor(1364, 232, 0x944204) {
-            ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
-            click 1417, 225
+            click 1364, 232
             sleep 600
 
             this.CloseDeclineOffer()
@@ -88,7 +87,6 @@ class MainScreen extends ScreenBase {
         ;a gomb zöld
         if base.IsPixelColor(1344, 805 , 0x09c462) {
             this.WriteDebug("Close Outfit Offer")
-            ; If base.HasTextInRect("OFFER", [850, 125, 190, 50]) {
             click 1420, 230
             sleep 600
 
@@ -104,7 +102,7 @@ class MainScreen extends ScreenBase {
     }
 
     CloseCollect(){
-        if base.IsPixelColor(800, 900, 0x13CA6C) {
+        if (base.IsPixelColor(800, 900, 0x13CA6C) || base.IsPixelColor(800, 900, 0x11C96A)) {
             this.WriteDebug("CloseCollect")
             click 800, 900
         }
