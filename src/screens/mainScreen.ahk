@@ -10,7 +10,7 @@ class MainScreen extends ScreenBase {
 
     CanPlay() {
         ; Ha nagyon zöld a PLAY gomb
-        return base.IsPixelColor(1750, 950, 0x09C563)
+        return (base.IsPixelColor(1750, 950, 0x09C563) || base.IsPixelColor(1750, 950, 0x08c462))
     }
 
     CloseBattlePalsOffer() {

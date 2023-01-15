@@ -3,7 +3,7 @@
 class GameScreen extends ScreenBase {
     IsResultVisible() {
         ; Bal lent kék háttérű gomb és fehér szöveg benne
-        return (base.IsPixelColor(135, 950, 0xEB950F) && base.IsPixelColor(260, 955, 0xFFFFFF))
+        return ((base.IsPixelColor(135, 950, 0xEB950F) && base.IsPixelColor(260, 955, 0xFFFFFF)) || (base.IsPixelColor(135, 950, 0xEA950E) && base.IsPixelColor(260, 955, 0xE9910E)))
     }
 
     Result() { 
@@ -38,7 +38,7 @@ class GameScreen extends ScreenBase {
         this.WriteDebug("Indul a visszaszamlalas...")
 */
         ; Ability vagy a heal villám töltve van
-        While (!base.IsPixelColor(1482, 483, 0xe4c99c) && !base.IsPixelColor(1689, 359, 0xe4c99c)){
+        While (!base.IsPixelColor(1482, 483, 0xe4c99c) && !base.IsPixelColor(1689, 359, 0xe4c99c) && !base.IsPixelColor(1482, 483, 0xDDC397) && !base.IsPixelColor(1689, 359, 0xE3C89B)) {
             sleep 500
         } 
         

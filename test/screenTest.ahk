@@ -58,9 +58,8 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
 }
 
 ; ; Kép pixel szín keresés
- TestImage("images\10_orai_valtas.png", 1750, 950, 0x09C563)
-
-; base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(700, 450, 0x00b0f8)
+ TestImage("images\w11_ingame", 1750, 950, 0x08c462)
+ ;sabotage_ingame  base.IsPixelColor(1750, 950, 0x08c462)
 
 ; Valódi játék képernyő pixel szín keresés
 ; TestGameScreen(850, 450, 0x8f6c02)
