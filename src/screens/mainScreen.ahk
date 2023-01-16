@@ -18,12 +18,9 @@ class MainScreen extends ScreenBase {
         if (base.IsPixelColor(1420, 260 , 0x7F2330) && base.IsPixelColor(1420, 225 , 0xFFFFFF)) {
             click 1420, 225
 
-            sleep 500
+            sleep 600
 
-            ; piros YES
-            if(base.IsPixelColor(865, 760 , 0x1C42EA)){
-                click 865, 760
-            }
+            this.CloseDeclineOffer()
         }
     }
 
@@ -31,6 +28,16 @@ class MainScreen extends ScreenBase {
         ;az X közepe sötétkék
         if base.IsPixelColor(1364, 232, 0x944204) {
             click 1364, 232
+            sleep 600
+
+            this.CloseDeclineOffer()
+        }
+    }
+
+    CloseOffer2() {
+        ;az X közepe fehér
+        if base.IsPixelColor(1414, 222, 0xffffff) {
+            click 1414, 222
             sleep 600
 
             this.CloseDeclineOffer()
@@ -95,9 +102,9 @@ class MainScreen extends ScreenBase {
     }
 
     CloseDeclineOffer(){
-        if (base.IsPixelColor( 700, 750, 0x1F45EC) && base.IsPixelColor( 783, 730, 0xFFFFFF)) {
+        if ((base.IsPixelColor( 700, 750, 0x1F45EC) || base.IsPixelColor( 700, 750, 0x1F44eb)) && base.IsPixelColor( 783, 730, 0xFFFFFF)) {
             this.WriteDebug("Close Decline Offer")
-            click 718, 710
+            click 783, 730
         }
     }
 
@@ -173,6 +180,7 @@ class MainScreen extends ScreenBase {
             this.CloseBattlePalsOffer()
             this.CloseContractProgress()
             this.CloseOffer()
+            this.CloseOffer2()
             this.CloseOfferOutfit()
             this.CloseLeaguesAdvance()
             this.DeclineInvite()

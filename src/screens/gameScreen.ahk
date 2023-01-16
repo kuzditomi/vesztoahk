@@ -27,18 +27,20 @@ class GameScreen extends ScreenBase {
     }
 
     WaitForGameStart() {
-        this.WriteDebug("Varom a kovetkezo kort!")
-
-     /*
-
-   While !base.IsPixelColor(661, 985, 0xC87700) {
-            sleep 500
-        }
-
-        this.WriteDebug("Indul a visszaszamlalas...")
-*/
-        ; Ability vagy a heal villám töltve van
-        While (!base.IsPixelColor(1482, 483, 0xe4c99c) && !base.IsPixelColor(1689, 359, 0xe4c99c) && !base.IsPixelColor(1482, 483, 0xDDC397) && !base.IsPixelColor(1689, 359, 0xE3C89B)) {
+        this.WriteDebug("Varom a kovetkezo kort!")        ; Ability vagy a heal villám töltve van
+        While (!base.IsPixelColor(1482, 483, 0xe4c99c) && 
+        !base.IsPixelColor(1689, 359, 0xe4c99c) && 
+        !base.IsPixelColor(1482, 483, 0xDDC397) && 
+        !base.IsPixelColor(1689, 359, 0xE3C89B) && 
+        !base.IsPixelColor(1482, 483, 0xDec499) && 
+        !base.IsPixelColor(1482, 483, 0xDec498) && 
+        !base.IsPixelColor(1482, 483, 0xDec497) && 
+        !base.IsPixelColor(1482, 483, 0xDec379) && 
+        !base.IsPixelColor(1482, 483, 0xDec398) && 
+        !base.IsPixelColor(1482, 483, 0xdec397) && 
+        !base.IsPixelColor(1482, 483, 0xdfc498) && 
+        !base.IsPixelColor(1482, 483, 0xdfc499) && 
+        !base.IsPixelColor(1482, 483, 0xdfc398)){
             sleep 500
         } 
         
