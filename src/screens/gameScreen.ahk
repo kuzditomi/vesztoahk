@@ -34,6 +34,7 @@ class GameScreen extends ScreenBase {
         !base.IsPixelColor(1689, 359, 0xE3C89B) && 
         !base.IsPixelColor(1482, 483, 0xDec499) && 
         !base.IsPixelColor(1482, 483, 0xDec498) && 
+        !base.IsPixelColor(1482, 483, 0xDec49a) && 
         !base.IsPixelColor(1482, 483, 0xDec497) && 
         !base.IsPixelColor(1482, 483, 0xDec379) && 
         !base.IsPixelColor(1482, 483, 0xDec398) && 

@@ -24,6 +24,12 @@ class MainScreen extends ScreenBase {
         }
     }
 
+    CloseSabotage() {
+        ;az X közepe sötétkék
+        if base.IsPixelColor(1388, 252, 0x944204) {
+            click 1388, 252
+        }
+    }
     CloseOffer() {
         ;az X közepe sötétkék
         if base.IsPixelColor(1364, 232, 0x944204) {
@@ -177,6 +183,7 @@ class MainScreen extends ScreenBase {
 
             this.WriteDebug("Zarogatok...")
             this.CloseFail()
+            this.CloseSabotage()
             this.CloseBattlePalsOffer()
             this.CloseContractProgress()
             this.CloseOffer()
