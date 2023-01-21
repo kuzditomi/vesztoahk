@@ -68,7 +68,7 @@ class GameScreen extends ScreenBase {
 
     DeclineWinstreak() {
         sleep 3000
-        if (base.IsPixelColor(880, 780, 0x1C43EA)) {
+        if (base.IsPixelColor(880, 780, 0x1C43EA) || base.IsPixelColor(880, 780, 0x1C42EA)) {
             ; Ez egész a főképernyőre visszadob elvileg nem kell Collect
             this.Esc() 
         }

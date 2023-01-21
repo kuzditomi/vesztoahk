@@ -90,7 +90,7 @@ class MainScreen extends ScreenBase {
 
     CloseStreakDontSave() {
         ; Piros gomb és arany medál
-        if (base.IsPixelColor(610, 750, 0x2147ED) && base.IsPixelColor(1050, 450, 0x8f6c02)){
+        if ((base.IsPixelColor(610, 750, 0x2147ED) || base.IsPixelColor(610, 750, 0x2146ED)) && base.IsPixelColor(1050, 450, 0x8f6c02)){
             this.WriteDebug("CloseStreakDontSave ")
             click 614, 750
         }
