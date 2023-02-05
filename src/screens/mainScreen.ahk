@@ -166,6 +166,7 @@ class MainScreen extends ScreenBase {
             return
         }
 
+        this.WriteDebug("Ismeretlen ablak, ESC")
         this.Esc()
         sleep 500
 
