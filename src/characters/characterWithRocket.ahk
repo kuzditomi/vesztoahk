@@ -14,8 +14,8 @@ class CharacterWithRocket extends CharacterBase {
         MouseClickDrag, Left, 154, 614, 154, 404, 80
     }
 
-        RovidWalkIntoGrenade() {
-        this.WriteDebug("Elore setalok")
+        RovidWalk() {
+        this.WriteDebug("Rovidet setalok")
 
         MouseMove 154, 614
         MouseClickDrag, Left, 154, 614, 154, 550, 80
