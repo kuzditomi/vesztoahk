@@ -65,7 +65,7 @@ TestMatchingColorPositionWithImageAndGameScreen(imagePath, x, y, pixelColor) {
  ;sabotage_ingame && !base.IsPixelColor(1482, 483, 0xdfc499) && !base.IsPixelColor(1482, 483, 0xDec379)
 
 ; Valódi játék képernyő pixel szín keresés
-TestGameScreen(1481, 483, 0xe4c9c, 2)
+TestGameScreen(135, 950, 0xEB95F, 2)
 
 ; Ellenőrzi hogy ugyanaz a játékképernyő és a képen lévő szín a pozíción
 ; TestMatchingColorPositionWithImageAndGameScreen("images\winstreak.png", 700, 450, 0x00b0f8)

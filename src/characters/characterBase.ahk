@@ -39,6 +39,11 @@ class CharacterBase {
         MouseClickDrag, Left, 1000, 600, 1675, 600, 3
     }
 
+    Turn45() {
+        ; gyors de nem tul gyors
+        MouseClickDrag, Left, 1000, 600, 1375, 600, 3
+    }
+
     WalkForward() {
         MouseMove, 154, 614
         MouseClickDrag, Left, 154, 614, 154, 404, 80

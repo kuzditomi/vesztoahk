@@ -13,6 +13,7 @@ class SmogBukoScript extends ScriptBase {
     Run() {
         this.screens.main.Play()
         this.screens.game.WaitForGameStartEnergy()
+        this.character.Turn45()
         this.character.WalkForward()
         this.character.WalkForward()
         this.character.WalkForward()
