@@ -34,6 +34,14 @@ class GameScreen extends ScreenBase {
         
     }
 
+    WaitForGameStartEnergy() {
+        this.WriteDebug("Varom a kovetkezo kort!")        ; Ability vagy a heal villám töltve van
+        While (!base.IsPixelColor(1682, 353, 0xe4c99c)){
+            sleep 1000
+        } 
+        
+    }
+
     IsSabotageCharacterChoosing() {
         return base.IsPixelColor(661, 985, 0xC87700)
     }

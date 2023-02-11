@@ -10,6 +10,7 @@
 #Include src\scripts\sparkleTomi.ahk
 #Include src\scripts\stalkerAFK.ahk
 #include src\scripts\sabotageAFK.ahk
+#Include src\scripts\smogBuko.ahk
 #include src\debugGui.ahk
 
 global currentScript
@@ -35,6 +36,9 @@ SelectScript(scriptName) {
         }
         Case "fireflySupreme":{
             currentScript := new FireFlySupremeScript()
+        }
+        Case "smogBuko":{
+            currentScript := new SmogBukoScript()
         }
         Case "firefly2Grenade":{
             currentScript := new FireFly2GrenadeScript()

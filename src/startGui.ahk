@@ -19,6 +19,9 @@ class StartGui {
 
         this.x += 120
         this.AddButton("FireFly Supreme", "fireflySupreme")
+        
+        this.x += 120
+        this.AddButton("Smog/Doc buko", "smogBuko")
 
         this.y += 90
         this.x := 20
