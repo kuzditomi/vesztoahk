@@ -7,24 +7,24 @@ class SmogBukoScript extends ScriptBase {
     }
 
     GetIntroductionText() {
-        return this.character.GetIntroductionText("egy raketas onmegsemmito")
+        return this.character.GetIntroductionText("raketas onmegsemmito")
     }
 
     Run() {
         this.screens.main.Play()
-        this.screens.game.WaitForGameStartEnergy()
-        this.character.Turn45()
-        this.character.WalkForward()
-        this.character.WalkForward()
-        this.character.WalkForward()
         this.screens.game.WaitForGameStart()
+        this.character.TurnBack()
+        this.character.WalkForward()
+        this.character.WalkForward()
+        this.character.WalkForward()
+        this.screens.game.WaitForRocket()
         this.character.LaunchRocket()
-        sleep 4000
+        sleep 2000
 
         while(!this.screens.game.IsResultVisible()) {
             this.WriteDebug("Kovetkezo raketa")
-            this.character.WalkForward()
-            this.screens.game.WaitForGameStart()
+            this.character.RovidWalk()
+            this.screens.game.WaitForRocket()
             ;sleep 500
             this.character.LaunchRocket()
             

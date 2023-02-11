@@ -28,19 +28,20 @@ class GameScreen extends ScreenBase {
 
     WaitForGameStart() {
         this.WriteDebug("Varom a kovetkezo kort!")        ; Ability vagy a heal villám töltve van
-        While (!base.IsPixelColor(1481, 483, 0xe4c99c)){
+        While (!base.IsPixelColor(1481, 483, 0xe4c99c) && (!base.IsPixelColor(1682, 353, 0xe4c99c))){
             sleep 1000
         } 
         
     }
 
-    WaitForGameStartEnergy() {
-        this.WriteDebug("Varom a kovetkezo kort!")        ; Ability vagy a heal villám töltve van
-        While (!base.IsPixelColor(1682, 353, 0xe4c99c)){
+    WaitForRocket() {
+        this.WriteDebug("Varom a kovetkezo raketat!")        ; Ability villám töltve van vagy megjelent a result
+        While ((!base.IsPixelColor(1481, 483, 0xe4c99c)) && (!base.IsPixelColor(135, 950, 0xEB950F))){
             sleep 1000
         } 
         
     }
+
 
     IsSabotageCharacterChoosing() {
         return base.IsPixelColor(661, 985, 0xC87700)
