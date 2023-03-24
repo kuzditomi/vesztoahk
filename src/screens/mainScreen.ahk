@@ -10,7 +10,7 @@ class MainScreen extends ScreenBase {
 
     CanPlay() {
         ; Ha nagyon zöld a PLAY gomb
-        return (base.IsPixelColor(1750, 950, 0x09C563) || base.IsPixelColor(1750, 950, 0x08c462))
+        return (base.IsPixelColor(1750, 950, 0x09C563) || base.IsPixelColor(1750, 950, 0x08c462) || base.IsPixelColor(1450, 950, 0x10c969))
     }
 
     CloseBattlePalsOffer() {
@@ -82,7 +82,7 @@ class MainScreen extends ScreenBase {
     DeclineInvite() {
         ; if base.HasTextInRect("INVITE", [888, 325, 150,60])
         ; Piros gomb és a serleg aranybarna
-        if (base.IsPixelColor(681, 655, 0x2247ED) && base.IsPixelColor(1270, 500, 0x076ee4)){
+        if (base.IsPixelColor(681, 655, 0x2247ED) ){ ;&& base.IsPixelColor(1270, 500, 0x076ee4)
             this.WriteDebug("Decline Invite")
             click 780, 695
         }
