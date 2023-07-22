@@ -8,7 +8,7 @@ class DebugGui {
     }
 
     Show() {
-        Gui, DebugGui:Show, h100 w400 x1000 y900
+        Gui, DebugGui:Show, h100 w400 x1000 y940
     }
 
     Write(debugMessage) {
