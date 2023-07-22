@@ -18,8 +18,8 @@ class ScreenBase {
             WinActivate
 
         ; A bal oldali fekete savba lehet batran kattintgatni
-        ; Click, 5, 45
-        Click 1615, 940 ; a ply gombot nyomkodja
+        Click, 5, 45
+        ; Click 1615, 940 ; a ply gombot nyomkodja
     }
 
     IsPixelColor(x,y,color, distance = 5) {
