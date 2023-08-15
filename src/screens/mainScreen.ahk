@@ -220,14 +220,14 @@ class MainScreen extends ScreenBase {
 
     CollectWinChest() {
         ; Sárga a ládától jobbra
-        if (base.IsPixelColor(175, 920, 0x27ABFE)){
+        if (base.IsPixelColor(155, 890, 0x3596D8)){
             Statistics.CollectedWinChest()
-            click 320, 920 ;battle chest bal lent
+            click 155, 890 ;battle chest bal lent
             sleep 1800
             loop 13
             {
                 sleep 500
-                click 320, 996
+                click 155, 890
             }
             sleep 1300
             ; ClosContract progress - Contract felirat szine turkiz es az x kozepe vilagoskek
@@ -239,15 +239,15 @@ class MainScreen extends ScreenBase {
 
     CollectKillChest() {
         ; Sárga a ládától jobbra
-        if (base.IsPixelColor(420, 925 , 0x27ABFE)){
+        if (base.IsPixelColor(385, 890 , 0x3596D8)){
             Statistics.CollectedKillChest()
 
-            click 700, 925 ;Kill chest bal lent
+            click 385, 890 ;Kill chest bal lent
             sleep 1800
             loop 10
             {
                 sleep 500
-                click 700, 925
+                click 385, 890
             }
             sleep 1300
             ; ClosContract progress - Contract felirat szine turkiz es az x kozepe vilagoskek
