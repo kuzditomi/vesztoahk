@@ -220,7 +220,7 @@ class MainScreen extends ScreenBase {
 
     CollectWinChest() {
         ; Sárga a ládától jobbra
-        if (base.IsPixelColor(485, 920, 0x27ABFE)){
+        if (base.IsPixelColor(175, 920, 0x27ABFE)){
             Statistics.CollectedWinChest()
             click 320, 920 ;battle chest bal lent
             sleep 1800
@@ -239,7 +239,7 @@ class MainScreen extends ScreenBase {
 
     CollectKillChest() {
         ; Sárga a ládától jobbra
-        if (base.IsPixelColor(700, 925 , 0x27ABFE)){
+        if (base.IsPixelColor(420, 925 , 0x27ABFE)){
             Statistics.CollectedKillChest()
 
             click 700, 925 ;Kill chest bal lent
